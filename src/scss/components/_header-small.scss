@@ -1,0 +1,21 @@
+.section-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.nav{
+    &__list {
+        display: flex;
+
+    }
+
+    &__item {
+        margin-right: 10px;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+}

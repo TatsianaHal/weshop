@@ -1,0 +1,109 @@
+section
+  .shop-head.details-main
+    .container
+      .row.shop-head__row
+        span.shop-head__crumbs Home>shop>details
+        h1.shop-head__title PRODUCT DETAILS
+
+section
+  .products
+    .container
+      .row.row-around
+
+        .products__col
+          .products__picture.products__picture_lg
+            a.products__slider.products__slider_left(href="#")
+              img.products__prev_img(src="src/svg/right-ar.svg", alt="before")
+            a.products__slider.products__slider_right(href="#")
+              img.products__next_img(src="src/svg/right-ar.svg", alt="after")
+          .products__picture.products__picture_sm
+
+        .products__col.products__info
+          span.products__price $589
+          span.products__name Star Wars Boy's The Force Awakens Character Match Up T-Shirt
+          .products__rating
+            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            a.products__review(href="#") Add review
+          p.products__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irrure dolor in reprehenderit in voluptate velit.
+
+          .products__details
+
+            .products__detail.products__things
+              a.products__things_link(href="#")
+                img.minus(src="src/svg/minus.svg", alt="less")
+              span.products__things_numb 20
+              a.products__things_link(href="#")
+                img.plus(src="src/svg/plus.svg", alt="more")
+
+            .products__detail
+              span.products__text Size
+              a.products__arrow(href="#")
+                img.products__arrow_icon(src="src/svg/down.svg", alt="more")
+
+            .products__detail
+              span.products__text Color
+              a.products__arrow(href="#")
+                img.products__arrow_icon(src="src/svg/down.svg", alt="more")
+
+          .products__btns
+            a.btn.btn-big.products__btn(href="#")
+              span.btn-text ADD TO CART
+            a.btn.btn-big.products__btn(href="#")
+              span.btn-text ADD TO WISHLIST
+          span.products__share SHARE
+          ul.products__socials
+            -
+              var socials= ["src/svg/facebook.svg",
+                            "src/svg/twitter.svg", 
+                            "src/svg/linkedin.svg",  
+                            "src/svg/google-plus.svg"]
+            each item in socials
+              li.products__social
+                a.products__social_link(href="#")
+                   img.products__social_img(src=item, alt="social")
+            
+
+
+section
+  .review
+    .review__head
+      .container
+        .row.row-around
+          a.review__head_title(href="#") DESCRIPTION
+          a.review__head_title(href="#") HISTORY
+          a.review__head_title(href="#") HISTORY
+    .review__body
+      .container
+        .row.review__row
+          p.review__text Lorem ipsum dolor sit amet, consectetur adipisining elt, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.
+          p.review__text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu figuat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+          .review__cat
+            span.review__cat_text Cotton
+            span.review__cat_text 70%
+          .review__slider
+          .review__cat
+            span.review__cat_text Ulk
+            span.review__cat_text 50%
+          .review__slider
+    
+          
+        
+
+section
+  .related-items
+    .container
+      .row.row-around
+        h3.related-items__title Related items
+        .related-items__body
+          a.related-items__slider.related-items__prev(href="#")
+            img.related-items__prev_img(src="src/svg/right-ar.svg", alt="before")
+
+          - for (var i = 1; i <= 4; i++)
+            include ../components/_sale-card
+
+          a.related-items__slider.related-items__next(href="#") 
+            img.related-items__next_img(src="src/svg/right-ar.svg", alt="after")

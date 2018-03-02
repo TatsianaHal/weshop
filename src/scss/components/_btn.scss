@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $f-s-sm;
+
+  border: 2px solid $color-blue;
+  border-radius: 1px;
+
+  .btn-text {
+    display: block;
+  }
+}
+
+.btn-big {
+  width: 190px;
+  height: 50px;
+}

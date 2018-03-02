@@ -1,0 +1,277 @@
+.shop-main {
+    background-color: $colour-light-gray;
+}
+
+.shop-head {
+    height: calc(100vh - 120px);
+    padding-top: 190px;
+
+    text-align: center;  
+
+    &__row {
+        flex-direction: column;
+    }
+
+    &__crumbs {
+        display: block;
+        margin-bottom: 10px;
+
+        color: #9aa6b9;
+        font-size: $f-s-lg;
+    }
+
+    &__title {
+        color: #3c4852;
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.shop {
+    padding-top: 90px;
+
+    &__products {
+        width: 850px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid $colour-gray;
+    }
+
+    &__grid_link:first-child {
+        margin-right: 15px;
+    }
+
+    &__header_icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    &__colors {
+        display: flex;
+    }
+
+    &__color {
+        display: block;
+        margin-right: 10px;
+        padding-bottom: 5px;
+    }
+
+    &__color:first-child {
+        background-color: #f44336;
+    }
+
+    &__color:nth-child(2) {
+        background-color: #4caf50;
+    }
+
+    &__color:nth-child(3) {
+        background-color: #2196f3;
+    }
+
+    &__color:nth-child(4) {
+        background-color: #3f51b5;
+    }
+
+    &__color:nth-child(5) {
+        background-color: #ffeb3b;
+    }
+
+    &__color:nth-child(6) {
+        background-color: #ff5722;
+    }
+
+    &__color:last-child {
+        margin-right: 0;
+
+        background-color: $color-blue;
+    }
+
+    &__sort_text {
+        margin-right: 10px;
+    }
+
+    &__sort_arrow {
+        width: 15px;
+        height: 15px;
+    }
+
+    &__cards {
+        margin-bottom: 20px;
+    }
+
+    &__footer {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    &__footer_link {
+        margin-right: 35px;
+    }
+
+    &__footer_link:last-child {
+        margin-right: 0;
+    }
+
+    &__footer_link:hover {
+        color: $color-blue;
+    }
+
+    &__aside {
+        width: 260px;
+
+        font-size: $f-s-sm;
+    }
+
+    &__aside_part {
+        margin-bottom: 20px;
+    }
+
+    &__aside_part:last-child {
+        margin-bottom: 0;
+    }
+
+    &__aside_title {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid $colour-gray;
+    }
+
+    &__aside_row {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid $colour-gray;
+    }
+
+    &__aside_title-price {
+        margin-bottom: 20px;
+    }
+
+    &__aside_slider {
+        position: relative;
+
+        margin-bottom: 20px;
+
+        height: 5px;
+        background-color: $color-blue;
+    }
+
+    &__aside_slider:before {
+        content: "";
+
+        position: absolute;
+        top: -5px;
+        left: 0px;
+
+        width: 5px;        
+        height: 15px;
+        background-color: $color-blue;
+    }
+
+    &__aside_slider:after {
+        content: "";
+
+        position: absolute;
+        top: -5px;
+        right: 0px;
+
+        width: 5px;        
+        height: 15px;
+        background-color: $color-blue;
+    }
+
+    &__aside_slider-under {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__aside_quant {
+        font-size: $f-s-xs;
+    }
+
+    &__asid_line {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    &__asid_line:last-child {
+        margin-bottom: 0;
+    }
+
+    &__aside_btn {
+        width: 90px;
+        height: 30px;
+    }
+
+    &__aside_btn:hover {
+        color: $colour-gray;
+
+        background-color: $color-blue;
+    }
+
+    &__aside_keyword {
+        width: 70px;
+        height: 25px;
+        margin-right: 10px;
+
+        color: #656c72;
+
+        background-color: $colour-light-gray;
+        border: 2px solid $colour-light-gray;
+    }
+
+    &__aside_keyword:last-child {
+        margin-right: 0;
+    }
+
+    &__aside_keyword:hover {
+        color: $colour-white;
+
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+    }
+}
+
+.aside {
+    &__card {
+        display: flex;
+        width: 260px;
+        padding: 20px 0 20px 0;
+
+        border-bottom: 1px solid $colour-gray;
+    }
+
+    &__card_img {
+        display: block;
+    }
+
+    &__card_info {
+        padding-left: 20px;
+    }
+
+}
+
+
+
+
+
+

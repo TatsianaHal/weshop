@@ -1,0 +1,76 @@
+.shop-card {
+    display: flex;
+    width: 850px;
+    padding: 40px 0 40px 0;
+
+    border-bottom: 1px solid $colour-gray;
+
+    &__img {
+        display: block;
+    }
+
+    &__details {
+        padding-left: 30px;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+
+        font-size: $f-s-sm;
+    }
+
+    &__price {
+        display: block;
+        margin-bottom: 20px;
+
+        font-size: $f-s-md;
+        color: $color-blue;
+    }
+
+    &__availab-rating {
+        margin-bottom: 20px;
+
+        font-size: $f-s-xs;
+    }
+
+    &__availab {
+        padding-right: 100px;
+    }
+
+    &__availab_blue {
+        color: $color-blue;
+    }
+
+    &__info {
+        margin-bottom: 20px;
+
+        font-size: $f-s-sm;
+    }
+
+    &__reviews {
+        display: flex;
+        
+    }
+
+    &__link {
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin-right: 30px;
+
+        border: 2px solid $color-blue;
+    }
+
+    &__link:last-child {
+        margin-right: 0;
+    }
+
+    &__link_corner {
+        position: absolute;
+
+        border: 6px solid transparent;
+        border-left: 6px solid $color-blue;
+        border-top: 6px solid $color-blue;
+    }
+}

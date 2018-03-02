@@ -1,0 +1,304 @@
+header.header
+  .container
+    .row
+
+      .header__col.header__col_left
+        span.header__number (00)-123-456-789
+        span.header__email  weshop@gmail.com 
+        a.header__link.header__logo(href="#")
+          img.header__img(src='src/img/logo.png', alt='logo')
+    
+      .header__col.header__col_center
+        form.header__search
+          input.header__input(placeholder='White Shi')
+          a.header__link.header__input_link(href="#") 
+
+        nav.header__main-nav
+          ul.header__nav-list
+            -
+              var mainNav = ["Home", "Shop", "Men", "Women", "Page", "Blog", "Contact us"]
+            each item in mainNav                 
+              li.header__nav-item
+                a.header__link.header__nav-link(href="#")= item
+
+      .header__col.header__col_right    
+        a.header__link.header__lang(href="#") English
+        a.header__link.header__currency(href="#") USD
+        a.header__link.header__login(href="#") Login
+        .header__basket
+          a.header__basket_link(href="#")
+          span.header__basket_thing
+            span.header__basket_quant 2
+        .header__price
+          span.header__price_numb $25.00
+
+
+
+
+
+
+
+
+
+section
+  .main
+    .container
+      .row
+        a.main__slider.main__prev(href="#")
+          pre.main__pre
+            |P
+            |R
+            |E
+            |V
+        .main__title
+          h1.main__title_name FASHION IS NOTHING
+          h2.main__title_text BUT
+            span.main__title_blue  MISCHIEFF
+          a.btn.btn-big.main__btn(href="#")
+            span.btn-text SHOP NOW
+        a.main__slider.main__next(href="#")
+          pre.main__pre
+            |N
+            |E
+            |X
+            |T
+
+
+
+
+
+
+
+
+
+section
+  .offers
+    .container
+      .row.row-around
+        .offers__stock
+          a.offers__stock_link.stock(href="#")  
+            span.stock__line.stock__line_first Men's t-shirt
+            br
+            span.stock__line.stock__line_big collection
+            br
+            span.stock__line.stock__line_wide 2016
+        .offers__stock
+          span.stock__line.stock__line_first 50% OFFER
+          br
+          span.stock__line.stock__line_second BELT
+            span.stock__line_blue  COLLECTION
+          br
+          a.stock__line.stock__line_link(href="#") See more...
+
+        -
+          var options= [
+                        {name:'24/7 HOUR SUPPORT',
+                        text:"Our online support section is available and regularly updated if you'd prefer."},
+                        {name:'EASY SERVICE',
+                        text:"Our online support section is available and regularly updated if you'd prefer."},
+                        {name:'HOME DELIVERY',
+                        text:"Our online support section is available and regularly updated if you'd prefer."}
+                        ]
+        each item in options
+          .offers__option
+            span.offers__option_name= item.name   
+            p.offers__option_text= item.text
+
+        .offers__detail
+          .offers__detail_image.offers__detail_first
+          .offers__detail_image.offers__detail_second
+            a.offers__detail_btn.btn.btn-big(href="#")
+              span.btn-text SHOP NOW
+        .offers__detail
+          .offers__detail_image.offers__detail_third    
+          .offers__detail_image.offers__detail_fourth
+            span.offers__detail_new New
+        .offers__detail
+          span.offers__detail_text MENS / LIFESTYLE
+          br
+          a.offers__detail_link(href="#") 
+            img.offers__detail_arrow(src="src/svg/right-ar.svg", alt="later")
+
+
+section
+  .collection
+    .container
+        .row.row-around
+          .section-head
+            h3.section-head__title NEW COLLECTION
+            include ../components/_header-small
+
+          .collection__row.line                             
+            - for (var i = 1; i <= 4; i++)
+              include ../components/_sale-card
+                                     
+          - for (var i = 1; i <= 4; i++)
+            include ../components/_sale-card
+
+section
+  .personal
+    .container
+        .row
+            a.personal__slider.personal__prev(href="#")
+                img.personal__prev_img(src="src/svg/right-ar.svg", alt="before")
+            .personal__title
+                b.personal__title_first PERSONAL 
+                    span.personal__title_blue  ASSISTENT
+                p.personal__title_second You don't know what to choose? We will help you
+                a.btn.btn-big(href="#")
+                  span.btn-text VIEW COLLECTION
+            a.personal__slider.personal__next(href="#") 
+                img.personal__next_img(src="src/svg/right-ar.svg", alt="after")
+
+section
+  .featured
+    .container
+        .row.row-around
+          .section-head
+            h3.section-head__title FEATURED
+            include ../components/_header-small
+
+          .featured__row.line                  
+            - for (var i = 1; i <= 4; i++)
+              include ../components/_sale-card 
+            
+          .featured__info.featured__info_text
+            span.featured__info_line NEW
+            br
+            span.featured__info_line MEN'S COLLECTION
+            br
+            span.featured__info_line COMING SOON
+          .featured__info.featured__info_pict
+
+section
+  .news
+    .container
+      .row.row-around 
+        h3.news__title LATEST NEWS
+        .news__row.line
+          - for (var i = 1; i <= 2; i++)
+            include ../components/_news-card 
+        
+        - for (var i = 1; i <= 2; i++)
+          include ../components/_news-card 
+
+section
+  .product
+    .container
+        .row
+            .product__col.product__col_left
+                span.product__title TRENDING
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card
+
+            .product__col.product__col_center
+                span.product__title TOP RATED
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card         
+
+            .product__col.product__col_right
+                span.product__title DATE UPDATED
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card
+
+                     
+
+section
+  .newsletter
+    .container
+      .row.row-around
+        .newsletter__col
+        .newsletter__col
+          h3.newsletter__title NEWSLETTER
+          span.newsletter__subtitle we are promissing,we will not spam.
+          form.newsletter__form
+            input.newsletter__form_email(type='email' name='name' placeholder='Enter your email')
+            a.newsletter__form_btn(href="#")
+
+section
+  .brand
+    .container
+      .row.row-around.brand__center
+        -
+          var brands= ["src/img/brand-1.png",
+                       "src/img/brand-2.png", 
+                       "src/img/brand-3.png", 
+                       "src/img/brand-4.png", 
+                       "src/img/brand-5.png", 
+                       "src/img/brand-6.png"]
+        each item in brands
+          img.brand__logo(src=item, alt="brand") 
+
+footer.footer
+  .container
+      .row.row-around
+          .footer__col
+            .footer__item
+              img.footer__logo(src="src/img/logo.png", alt="logo")
+              p.footer__item_about USA most-loved online fashion store featuring new details.
+              br
+              p.footer__item_about When it comes to trend, we all love being in it- Seeping every bit of it in WESHOP.com
+            .footer__item.footer__item_support
+              span.footer__item_title SUPPORT
+              br
+              br
+              span.footer__item_about How to Older?
+              br
+              span.footer__item_about Payments
+              br
+              span.footer__item_about Assistance
+              br
+              span.footer__item_about Delivery
+          .footer__col
+            .footer__item.footer__item_duties
+              span.footer__item_title DUTIES
+              br
+              br
+              span.footer__item_about Terms and Conditions
+              br
+              span.footer__item_about Shop Policy
+              br
+              span.footer__item_about Contact Us
+            .footer__item
+              span.footer__item_title INSTAGRAM FEED
+              br
+              br
+              .footer__item_insta
+                -
+                  var insta= ["src/img/insta.png", 
+                              "src/img/insta.png", 
+                              "src/img/insta.png", 
+                              "src/img/insta.png"]
+                each item in insta  
+                  img.footer__item_img(src=item, alt="insta")
+                                
+              .footer__item_cards 
+                -
+                  var cards= ["src/img/credit-card.png",
+                              "src/img/credit-card.png", 
+                              "src/img/credit-card.png", 
+                              "src/img/credit-card.png", 
+                              "src/img/credit-card.png"]
+                each item in cards  
+                  img.footer__item_card(src=item, alt="card")
+            
+          ul.footer__socials
+            -
+              var socials= ["src/svg/facebook.svg",
+                            "src/svg/twitter.svg", 
+                            "src/svg/linkedin.svg", 
+                            "src/svg/youtube.svg",  
+                            "src/svg/google-plus.svg"]
+            each item in socials
+              li.footer__social
+                a.footer__social_link(href="#")
+                  img.footer__social_img(src=item, alt="social")
+      
+  span.footer__copyright Copyrights MOHAMMAD SHOAHG. All rights researved 2016
+
+
+
+
+
+
+

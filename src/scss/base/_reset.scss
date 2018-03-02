@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+div,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+a,
+ul,
+ol,
+li,
+img,
+svg,
+nav,
+span,
+menu,
+form,
+input,
+table,
+button,
+textarea,
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}

@@ -1,0 +1,9 @@
+nav.nav        
+  ul.nav__list
+    -
+      var nav = ["ALL", "MEN", "WOMEN", "SHOP", "ACCESSORIES"]
+    each item in nav  
+      li.nav__item
+        a.nav__link(href="#")= item
+          span.nav__quant
+      
