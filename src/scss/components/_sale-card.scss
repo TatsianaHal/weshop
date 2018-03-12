@@ -1,8 +1,8 @@
 .card {
     position: relative;
 
-    width: 23%;
-    height: 340px;
+    width: 60%;
+    margin-bottom: 20px;
 
     &__img {
         width: 100%;
@@ -55,25 +55,15 @@
     }
 
     &__link_view {
-        top: 70px;
+        top: 100px;
         right: 0;
+
+        @media(min-width: $sm){
+            top: 80px;  
+        }
       
-
         @media(min-width: $md){
-            top: 100px;  
-        }
-
-        @media(min-width: $lg){
-            top: 150px;
-        }
-    }
-
-    &__link_like {
-        top: 120px;
-        right: 0;
-
-        @media(min-width: $md){
-            top: 150px;
+            top: 140px;  
         }
 
         @media(min-width: $lg){
@@ -81,9 +71,26 @@
         }
     }
 
+    &__link_like {
+        top: 150px;
+        right: 0;
+
+        @media(min-width: $sm){
+            top: 130px;  
+        }
+
+        @media(min-width: $md){
+            top: 190px;
+        }
+
+        @media(min-width: $lg){
+            top: 250px;
+        }
+    }
+
     &__text {
         position: absolute;
-        top: 170px;
+        top: 200px;
         right: 35px;
 
         display: block;
@@ -97,29 +104,43 @@
 
         background-color: $color-blue;
 
+        @media(min-width: $sm){
+            top: 180px;  
+        }
+
         @media(min-width: $md){
-            top: 200px;
+            top: 240px;
         }
 
         @media(min-width: $lg){
-            top: 250px;
+            top: 300px;
         }
     }
 
     &__basket {
-        top: 170px;
+        top: 200px;
         right: 0;
 
+        @media(min-width: $sm){
+            top: 180px;  
+        }
+
         @media(min-width: $md){
-            top: 200px;
+            top: 240px;
         }
 
         @media(min-width: $lg){
-            top: 250px;
+            top: 300px;
         }
     }
 
-    
+    @media(min-width: $sm){
+        width: 23%;  
+    } 
+}
+
+.card:last-child {
+    margin-bottom: 0;
 }
 
 

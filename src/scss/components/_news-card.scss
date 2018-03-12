@@ -1,6 +1,7 @@
 .news-card {
     display: flex;
-    width: 45%;
+    width: 90%;
+    margin-bottom: 50px;
     padding-left: 30px;
 
     &__pict {
@@ -86,5 +87,12 @@
         color: $color-blue;
     }
 
-    
+    @media(min-width: $sm){
+        width: 45%; 
+        margin-bottom: 0; 
+    } 
 }
+
+.news-card:last-child {
+    margin-bottom: 0;
+} 

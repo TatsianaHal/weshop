@@ -134,7 +134,7 @@
 
     &__arrow {
         display: block;
-        padding-left: 16px;
+        width: 50px;
     }
 
     &__arrow_icon {
@@ -197,7 +197,19 @@
     }
 
     &__head_title {
+        position: relative;
+
         color: $colour-white;
+    }
+
+    &__head_title::before {
+        content: "";
+
+        position: absolute;
+        top: 27px;
+
+        border: 12px solid transparent;
+        border-bottom: 12px solid $colour-white;
     }
 
     &__body {
@@ -209,6 +221,7 @@
 
     &__row {
         flex-direction: column;
+        padding: 0 20px 0 20px;
     }
 
     &__text {
@@ -220,18 +233,27 @@
     }
 
     &__slider {
+        position: relative;
+
         height: 10px;
         margin-bottom: 20px;
 
         background-color: $color-blue;
     }
 
-    &__slider {
-        margin-bottom: 20px;
-    }
-
     &__slider:last-child {
         margin-bottom: 0;
+    }
+
+    &__slider::before {
+        content: "";
+
+        position: absolute;
+        top: -19px;
+        right: 0;
+
+        border: 10px solid transparent;
+        border-bottom: 10px solid $color-blue;
     }
 
 }
@@ -259,11 +281,15 @@
     }
 
     &__slider {
-        position: absolute;
-        top: 200px;
+        display: none;
 
-        display: block;
-        width: 45px;
+        @media(min-width: $lg){
+            position: absolute;
+            top: 200px;
+
+            display: block;
+            width: 45px;
+        }
     }
 
     &__slider_prev {
