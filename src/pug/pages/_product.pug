@@ -1,0 +1,18 @@
+section
+  .product
+    .container
+        .row.row-around
+            .product__col
+                span.product__title TRENDING
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card
+
+            .product__col
+                span.product__title TOP RATED
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card         
+
+            .product__col
+                span.product__title DATE UPDATED
+                - for (var i = 1; i <= 3; i++)
+                  include ../components/_product-card

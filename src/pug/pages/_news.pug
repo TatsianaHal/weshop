@@ -1,0 +1,11 @@
+section
+  .news
+    .container
+      .row.row-around 
+        h3.news__title LATEST NEWS
+        .news__wrap.line
+          - for (var i = 1; i <= 2; i++)
+            include ../components/_news-card 
+        .news__wrap.line
+          - for (var i = 1; i <= 2; i++)
+            include ../components/_news-card 

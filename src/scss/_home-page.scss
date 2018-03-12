@@ -33,17 +33,19 @@
 
     &__logo {
         display: block;
-        width: 150px;
-        height: auto;
+        width: 40%;
         padding-top: 20px;
+
+        color: $colour-white;
+    }
+
+    &__logo_img {
+        width: 100%;
+        height: auto;
     }
 
     &__col_center {
         width: 50%;
-    }
-
-    &__link {
-        color: $colour-white;
     }
 
     &__search {
@@ -83,6 +85,10 @@
         font-size: $f-s-sm;
     } 
 
+    &__link {
+        color: #ffffff;
+    }
+
     &__nav-item:nth-child(2)::after {
         content: url(../svg/right-arrow.svg);
     }
@@ -100,46 +106,40 @@
     }
 
     &__col_right {
-        display: flex;
-        flex-wrap: wrap;
         width: 25%;
     }
 
-    &__lang {
-        display: block;
-        width: 33%;
+    &__lang-cur-login {
+        display: flex;
+        justify-content: flex-end;
     }
 
-    &__lang::after {
+    &__lang-cur-login_item:first-child::after {
+        margin-right: 40px;
+
         content: url(../svg/right-arrow.svg);
     }
 
-    &__currency {
-        display: block;
-        width: 33%;
-    }
+    &__lang-cur-login_item:nth-child(2)::after {
+        margin-right: 40px;
 
-    &__currency::after {
         content: url(../svg/right-arrow.svg);
-    }
-
-    &__login {
-        display: block;
-        width: 33%;
     }
 
     &__basket {
-        position: relative;
-
         display: flex;
-        justify-content: flex-end;
-        width: 50%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
     }
 
     &__basket_link {
+        position: relative;
+
         display: block;
         width: 40px;
         height: 40px;
+        margin-right: 10px;
         padding: 6px 0 0 6px;
 
         border: 1px solid $colour-white;
@@ -150,10 +150,10 @@
         content: url(../svg/bag.svg);
     }
 
-    &__basket_thing {
+    &__basket_quant {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -5px;
+        right: -5px;
 
         display: block;
         width: 16px;
@@ -170,11 +170,6 @@
     &__basket_quant {
         vertical-align: center;
     }
-
-    &__price {
-        width: 50%;
-        padding: 15px 0 0 10px;;
-    }
 }
 
 
@@ -189,7 +184,13 @@
     height: calc(100vh - 120px);
     padding-top: 150px;
 
+    &__row {
+        position: relative;
+    }
+
     &__slider {
+        position: absolute;
+
         display: block;
         width: 40px;
 
@@ -197,19 +198,38 @@
         color: $color-blue;
     }
 
-    &__prev {
-      margin-left: -40px;
+    &__slider_prev {
+        left: 0;
+
+      @media(min-width: $lg){
+        left: -40px;  
+    }
     }
 
-    &__next {
-        margin-right: -40px;
+    &__slider_next {
+        right: 0;
 
-        text-align: end;
+        @media(min-width: $md){
+            text-align: center;
+        }
+
+        @media(min-width: $lg){
+            right: -40px;
+
+            text-align: end;    
+        }
     }
 
     &__title {
         width: 100%;
-        padding-left: 200px;
+
+        text-align: center;
+
+        @media(min-width: $lg){
+            padding-left: 200px;  
+            
+            text-align: start;
+        }
     }
 
     &__title_name {
@@ -225,9 +245,16 @@
     }
 
     &__btn {
+        margin: 0 auto;
+
         color: #ffffff;
 
         background-color: $color-blue;
+
+        @media(min-width: $lg){
+            margin: 0;
+            
+        }
     }
 }
 
@@ -246,15 +273,22 @@
 
     background-color: $colour-light-gray;
 
+    &__wrap {
+        margin-bottom: 80px;
+    }
+
+    &__wrap:last-child {
+        margin-bottom: 0;
+    }
+
     &__stock {
         position: relative;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 550px;
-        height: 250px;
-        margin-bottom: 80px;
+        width: 45%;
+        height: 250px;  
 
         border: 3px solid $colour-gray;
         background-color: $colour-white;
@@ -265,7 +299,6 @@
 
         width: 90%;
         height: 95%;
-        // padding: 80px 0 0 100px;
 
         border: 3px solid $color-blue;
     }
@@ -304,7 +337,6 @@
     &__option {
         width: 33%;
         padding: 0 20px 0 20px;
-        margin-bottom: 80px;
     }
 
     &__option::before {
@@ -315,55 +347,53 @@
         font-size: $f-s-sm;
     }
 
-    &__option_name {
+    &__option_info {
         padding-left: 60px;
     }
 
     &__option_text {
-        padding-left: 60px;
-
         color: #3c4852;
     }
-    
 
-    &__detail {
+    &__details {
         position: relative;
 
-        width: 370px;
+        width: 30%;
         height: 500px;        
     }
 
-    &__detail_image {
+    &__detail {
         width: 100%;
         height: 240px;
-
-        background-color: $colour-gray;
     }
 
-    &__detail_image:first-child {
-        margin-bottom: 20px;     
+    &__detail:first-child {
+        margin-bottom: 20px;  
+    }
+
+    &__detail_pict {
+        width: 100%;
+        height: 100%;
     }
 
     &__detail_first {
-        width: 100%;
-        border-bottom: 240px solid red;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        height: 0;
-        width: 100px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
     }
  
     &__detail_second {
         position: relative;
 
-        background-color: $colour-light-gray;
-        border: 3px solid $colour-white;
+        clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     &__detail_btn {
         position: absolute;
         top: 150px;
-        left: 80px;
+        left: 1%;
+
+        @media(min-width: $lg){
+            left: 15%;
+        }
     }
 
     &__detail_fourth {
@@ -372,7 +402,9 @@
         color: $colour-white;
     }
 
-    &__detail_new {
+    &__detail_fourth::before {
+        content: "New";
+
         position: absolute;
         top: 20px;
         left: 20px;
@@ -389,7 +421,7 @@
         background-color: $color-blue;
     }
 
-    &__detail:last-child {
+    &__details:last-child {
         padding-top: 200px;
 
         text-align: center;
@@ -397,7 +429,7 @@
         background-color: $colour-white;
     } 
     
-    &__detail:last-child::before {
+    &__details:last-child::before {
         content: "";
 
         position: absolute;
@@ -407,7 +439,6 @@
         width: 90%;
         height: 94%;
         
-
         border: 3px solid $color-blue;
     }
 }
@@ -423,9 +454,13 @@
 .collection {
     padding: 100px 0 100px 0;
 
-    &__row {
+    &__wrap {
         margin-bottom: 20px;
     }  
+
+    &__wrap:last-child {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -441,23 +476,37 @@
 
     background-color: #f1edee;
 
+    &__row {
+        position: relative;
+    }
+
     &__slider {
+        position: absolute;
+
         display: block;
         width: 45px;
     }
 
-    &__prev {
-        margin-left: -45px;
+    &__slider_prev {
+        left: 0;
+
+        @media(min-width: $lg){
+            left: -45px;
+        }
     }
 
-    &__prev_img {  
+    &__slider_prev-icon {  
         transform: rotate(180deg);
     }
 
-    &__next {
-        margin-right: -45px;
+    &__slider_next {
+        right: 0;
 
         text-align: end;
+
+        @media(min-width: $lg){
+            right: -45px;
+        }
     }
 
     &__title {
@@ -465,6 +514,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        
     }
 
     &__title_first {
@@ -498,20 +548,20 @@
 .featured {
     padding: 100px 0 100px 0;
 
-    &__row {
+    &__wrap {
         margin-bottom: 50px;
     }
 
-    &__row:last-child {
+    &__wrap:last-child {
         margin-bottom: 0;
     }
 
     &__info {
-        width: 550px;
+        width: 45%;
         height: 250px;
     }
 
-    &__info_text {
+    &__info:first-child {
         padding-top: 50px;
 
         text-align: center;
@@ -524,8 +574,9 @@
         letter-spacing: 5px;
     }
 
-    &__info_pict {
-        background-color: #f7f6f3;
+    &__img {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -544,16 +595,16 @@
 
     &__title {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         text-align: center;
     }
 
-    &__row {
+    &__wrap{
         margin-bottom: 50px;
     }
 
-    &__row:last-child {
+    &__wrap:last-child {
         margin-bottom: 0;
     }
 }
@@ -570,20 +621,41 @@
     margin-bottom: 100px;
     padding-top: 100px;
 
-    &__col {
-        width: 33%;
-    }
-
-    &__col_center {
-        text-align: center;
-    }
-
-    &__col_right {
-        text-align: end;
-    }
-
     &__title {
+        margin-bottom: 15px;
+
         font-size: $f-s-md;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    &__col:nth-child(2) {
+        align-items: center;
+    }
+
+    &__col:last-child {
+        align-items: flex-end;
+
+        .product-card {
+            justify-content: flex-end;
+        }
+
+        .product-card__pict {
+            order: 2;
+
+            margin-right: 0;
+        }
+
+        .product-card__details {
+            order: 1;
+            margin-right: 15px;
+
+            text-align: end;
+        }
     }
 }
 
@@ -599,7 +671,7 @@
     margin-bottom: 50px;
 
     &__col {
-        width: 550px;
+        width: 45%;
         height: 250px;
     }
 
@@ -614,36 +686,57 @@
 
         position: absolute;
         top: 25px;
-        left: 25px;
+        left: 5%;
 
-        width: 500px;
+        width: 90%;
         height: 200px;
 
         border: 5px solid $colour-white;
     }
 
     &__col:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 70px;
-
-        text-align: center;
 
         background-color: $colour-light-gray;
     }
 
     &__title {
+        display: block;
+        margin-bottom: 10px;
+
         font-size: $f-s-lg;
     }
 
     &__subtitle {
+        display: block;
+        margin-bottom: 10px;
+
         font-size: $f-s-sm;
     }
 
     &__form {
+        width: 50%;
+        height: 40px;
+        padding-left: 15px;
+
         font-size: $f-s-xs;
+
+        border: 1px solid $colour-gray;
     }
 
     &__form_email {
+        width: 80%;
+        padding-top: 13px;
+
         background-color: $colour-light-gray;
+    }
+
+    &__form_arrow {
+        width: 20px;
+        height: auto;
     }
 }
 
@@ -656,16 +749,21 @@
 
 
 .brand {
-    padding: 70px 0 70px 0;
+    padding: 80px 0 80px 0;
 
     background-color: $colour-light-gray;
 
-    &__center {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         align-items: center;
+        width: 100%;
     }
 
-    &__logo {
-        display: block;
+    &__link {
+        width: 130px;
+        height: 70px;
     }
 }
 
@@ -682,6 +780,10 @@
 
     font-size: $f-s-sm;
 
+    &__wrap {
+        margin-bottom: 20px;
+    }
+
     &__col {
         position: relative;
 
@@ -691,28 +793,47 @@
 
     &__item {
         width: 50%;
+        padding-left: 10px;
+    }
+
+    &__logo {
+        display: block;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    &__logo_img {
+        width: 100%;
+        height: auto;
     }
 
     &__item_support {
         padding-left: 80px;
     }
 
-    &__logo {
-        margin-bottom: 15px;
+    &__insta {
+        display: flex;
+        flex-wrap: wrap
     }
 
-    &__item_insta {
+    &__insta_col {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        width: 50%;
         margin-bottom: 20px;
         padding-bottom: 20px;
 
         border-bottom: 1px solid $colour-gray;
     }
 
-    &__item_img {
-        display: block;
+    &__insta_imgs {
+        width: 60px;
+    }
+
+    &__insta_img {
+        width: 100%;
+        height: auto;
     }
     
     &__item_cards {
@@ -736,8 +857,8 @@
         display: flex;
         justify-content: center;
         width: 350px;
-        margin-bottom: 20px;
-        padding: 20px 0;
+        margin: 0 auto 20px auto;
+        padding-bottom: 20px;
 
         border-bottom: 1px solid $colour-gray;
     }

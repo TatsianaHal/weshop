@@ -4,10 +4,10 @@
     background-color: $colour-light-gray;
 
     &__col {
-        width: 555px;
+        width: 45%;
     }
 
-    &__picture_lg {
+    &__picture:first-child {
         position: relative;
 
         height: 590px;
@@ -29,11 +29,11 @@
         right: 10px;
     }
 
-    &__prev_img {  
+    &__slider_left-icon{  
         transform: rotate(180deg);
     }
 
-    &__picture_sm {
+    &__picture:last-child {
         height: 200px;
         
         background-color: $colour-white;
@@ -93,7 +93,6 @@
 
         text-align: center;
 
-        background-color: $colour-white;
         border: 1px solid $colour-gray;
     }
 
@@ -101,18 +100,28 @@
         margin-right: 0;
     }
 
+    &__detail_image {
+        width: 100%;
+    }
+
+    &__detail_pict {
+        width: 100%;
+        height: auto;
+    }
+
     &__things_link {
         display: block;
         width: 50px;
-        padding-top: 18px;
     }
 
     &__things_numb {
         width: 50px;
-        padding-top: 18px;
 
+        text-align: center;
+    
         border-left: 1px solid $colour-gray;
         border-right: 1px solid $colour-gray;
+        background-color: $colour-light-gray;
     }
 
     &__text {
@@ -125,7 +134,7 @@
 
     &__arrow {
         display: block;
-        padding: 18px 0 0 16px;
+        padding-left: 16px;
     }
 
     &__arrow_icon {
@@ -238,6 +247,10 @@
 .related-items {
     padding: 50px 0 50px 0;
 
+    &__row {
+        position: relative;
+    }
+
     &__title {
         width: 100%;
         margin-bottom: 30px;
@@ -246,28 +259,24 @@
     }
 
     &__slider {
+        position: absolute;
+        top: 200px;
+
         display: block;
         width: 45px;
-        padding-top: 140px;
     }
 
-    &__prev {
-        margin-left: -45px;
+    &__slider_prev {
+        left: -45px;
     }
 
-    &__prev_img {  
+    &__slider_prev-icon {  
         transform: rotate(180deg);
     }
 
-    &__next {
-        margin-right: -45px;
+    &__slider_next {
+        right: -45px;
 
         text-align: end;
-    }
-
-    &__body {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
     }
 }

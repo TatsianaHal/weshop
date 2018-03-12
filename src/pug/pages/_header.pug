@@ -1,0 +1,44 @@
+header.header
+  .container
+    .row
+
+      .header__col.header__col_left
+        span.header__number (00)-123-456-789
+        span.header__email  weshop@gmail.com 
+        a.header__logo(href="#")
+          img.header__logo_img(src='src/img/logo.png', alt='logo')
+    
+      .header__col.header__col_center
+        form.header__search
+          input.header__input(placeholder='White Shi')
+          a.header__input_link(href="#") 
+
+        nav.header__main-nav
+          ul.header__nav-list
+            -
+              var mainNav = ["Home", 
+                             "Shop", 
+                             "Men", 
+                             "Women", 
+                             "Page", 
+                             "Blog", 
+                             "Contact us"]
+            each item in mainNav                 
+              li.header__nav-item
+                a.header__nav-link.header__link(href="#")= item
+
+      .header__col.header__col_right
+        ul.header__lang-cur-login
+          -
+            var langCurLogin = ["English", 
+                                "USD", 
+                                "Login"]
+          each item in langCurLogin                 
+            li.header__lang-cur-login_item
+              a.header__lang-cur-login_link.header__link(href="#")= item
+       
+        .header__basket
+          a.header__basket_link(href="#")
+            span.header__basket_quant 2
+          .header__price
+            span.header__price_numb $25.00

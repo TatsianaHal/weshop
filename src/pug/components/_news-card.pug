@@ -1,16 +1,28 @@
 .news-card
-    .news-card
-    span.news-card__date
-    img.news-card__img(alt="")
-    .news-card__info
-        p.news-card__title
-        .news-card__contact
-            span.news-card__admin
-            ul.news-card__socials
-                li.news-card__link
-                    a.news-card__link.news-card__link_facebook(href="#")
-                li.news-card__link
-                    a.news-card__link.news-card__link_twitter(href="#")
-                li.news-card__link
-                    a.news-card__link.news-card__link_google(href="#")
-        a.news-card__link(href="#")
+  .news-card__pict
+    img.news-card__img(src="src/img/news-card.png", alt="card")
+  .news-card__info
+    p.news-card__title 4 DENIM SHAPES WORTH HANG-ING UP YOUR SKINNY JEANS
+    .news-card__contact
+      span.news-card__admin Admin
+      ul.news-card__socials
+        -
+          var socials= ["src/svg/facebook.svg",
+                        "src/svg/twitter.svg",  
+                        "src/svg/google-plus.svg"]
+        each item in socials
+          li.news-card__social
+            a.fnews-card__social_link(href="#")
+              img.news-card__social_img(src=item, alt="social")
+
+
+
+
+
+        li.news-card__link
+          a.news-card__link.news-card__link_facebook(href="#")
+        li.news-card__link
+          a.news-card__link.news-card__link_twitter(href="#")
+        li.news-card__link
+          a.news-card__link.news-card__link_google(href="#")
+    a.news-card__link(href="#") Read full article...

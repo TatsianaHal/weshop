@@ -1,0 +1,171 @@
+section
+  .shop
+    .container
+      .row.row-around
+        .shop__products
+          .shop__header
+
+            .shop__grid
+              a.shop__grid_link(href="#")
+                img.shop__grid_icon.shop__header_icon(src="src/svg/table-grid.svg", alt="table-grid")
+              a.shop__grid_link(href="#")
+                img.shop__grid_icon.shop__header_icon(src="src/svg/row-grid.svg", alt="row-grid")
+
+            .shop__colors
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+              a.shop__color.shop__header_icon(href="#")
+
+            -
+              var sort= [{
+                        title:'Sort by:',
+                        text:"Date"
+                        },{
+                        title:'Shows',
+                        text:"12"
+                        }]
+            each item in sort
+              .shop__sort
+                span.shop__sort_text= item.title
+                span.shop__sort_text= item.text
+                button.shop__sort_link(href="#")
+                    img.shop__sort_arrow(src="src/svg/down-arrow.svg", alt="more")
+
+          .shop__cards
+            - for (var i = 1; i <= 4; i++)
+              include ../components/_shop-card   
+
+          ul.shop__footer
+            -
+              var pages= ["Prev",
+                           "1", 
+                           "2", 
+                           "3", 
+                           "4", 
+                           "5",
+                           "Next"]
+            each item in pages
+              li.shop__footer_item
+                a.shop__footer_link(href="#")= item 
+            
+
+        aside.shop__aside   
+          .shop__aside_part
+            span.shop__aside_title CATEGORY
+            ul.shop__aside_list
+              -
+                var category= [{
+                            text:'Women',
+                            quant:'(19)'
+                            },{
+                            text:'Man',
+                            quant:'(10)'
+                            },{
+                            text:'Kids',
+                            quant:'(4)'
+                            },{
+                            text:'Bags',
+                            quant:'(5)'
+                            },{
+                            text:'Accessories',
+                            quant:'(2)'
+                            },{
+                            text:'Watch',
+                            quant:'(7)'
+                            }]
+              each item in category
+                li.shop__aside_row
+                  a.shop__aside_item(href="#")= item.text 
+                  span.shop__aside_quant= item.quant
+            
+          .shop__aside_part
+            span.shop__aside_title.shop__aside_title-price PRICE BY FILTER
+            .shop__aside_slider
+            .shop__aside_slider-under
+              .shop__aside_interval
+                span.shop__aside_price Price: $
+                input.shop__aside_price(type='text' name='name' placeholder='250')
+                span.shop__aside_price -$
+                input.shop__aside_price(type='text' name='name' placeholder='100')
+              a.shop__aside_btn.btn(href="#")
+                span.btn-text Filter
+                  
+          .shop__aside_part
+            span.shop__aside_title SIZE
+            ul.shop__aside_list
+              -
+                var size=[{
+                            text:'S',
+                            quant:'(19)'
+                            },{
+                            text:'M',
+                            quant:'(10)'
+                            },{
+                            text:'L',
+                            quant:'(4)'
+                            },{
+                            text:'XL',
+                            quant:'(5)'
+                            },{
+                            text:'XXL',
+                            quant:'(2)'
+                            }]
+                
+              each item in size 
+                li.shop__aside_row
+                  input(type="radio" checked name="raz")
+                  a.shop__aside_item(href="#")= item.text 
+                  span.shop__aside_quant= item.quant
+            
+          .shop__aside_part
+            span.shop__aside_title BEST SALE
+
+            -
+              var top= [{
+                         img:'src/img/top-white.png',
+                         name:"Denim t-shirt for boys",
+                         price:'$289-$250'
+                         }, {
+                        img:'src/img/top-blue.png',
+                         name:"Denim t-shirt for boys",
+                         price:'$289-$250'
+                         }]
+            each item in top
+              .shop__aside_card.aside.aside__card
+                .aside__card_pict
+                  img.aside__card_img(src= item.img, alt="t-shirt") 
+                .aside__card_info
+                  span.aside__card_name= item.name
+                  br
+                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  br
+                  span.aside__card_price= item.price
+            
+
+          .shop__aside_part
+            span.shop__aside_title KEYWORD
+            .shop__asid_line
+              -
+                var keyword= ["T-shirt",
+                              "Black", 
+                              "White"]
+              each item in keyword
+                a.shop__aside_keyword.btn(href="#")
+                  span.btn-text= item 
+
+            .shop__asid_line
+              -
+                var keyword= ["Fashion", 
+                              "Woman", 
+                              "Man"]
+              each item in keyword
+                a.shop__aside_keyword.btn(href="#")
+                  span.btn-text= item 

@@ -1,12 +1,19 @@
 .card {
     position: relative;
 
-    width: 270px;
+    width: 23%;
     height: 340px;
 
-    background-color: $colour-gray;
+    &__img {
+        width: 100%;
+        height: auto;
+    }
 
     &__cost {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
         display: block;
         width: 50px;
         height: 35px;
@@ -28,14 +35,16 @@
         border: 2px solid $color-blue;
     }
 
-    &__link_corner {
+    &__link::before {
+        content: "";
+
         position: absolute;
 
         border: 6px solid transparent;
         border-left: 6px solid $color-blue;
         border-top: 6px solid $color-blue;
     }
-
+    
     &__icon {
         position: absolute;
         top: 4px;
@@ -46,18 +55,35 @@
     }
 
     &__link_view {
-        top: 150px;
+        top: 70px;
         right: 0;
+      
+
+        @media(min-width: $md){
+            top: 100px;  
+        }
+
+        @media(min-width: $lg){
+            top: 150px;
+        }
     }
 
     &__link_like {
-        top: 220px;
+        top: 120px;
         right: 0;
+
+        @media(min-width: $md){
+            top: 150px;
+        }
+
+        @media(min-width: $lg){
+            top: 200px;
+        }
     }
 
     &__text {
         position: absolute;
-        top: 290px;
+        top: 170px;
         right: 35px;
 
         display: block;
@@ -70,11 +96,27 @@
         font-size: $f-s-sm;
 
         background-color: $color-blue;
+
+        @media(min-width: $md){
+            top: 200px;
+        }
+
+        @media(min-width: $lg){
+            top: 250px;
+        }
     }
 
     &__basket {
-        top: 290px;
+        top: 170px;
         right: 0;
+
+        @media(min-width: $md){
+            top: 200px;
+        }
+
+        @media(min-width: $lg){
+            top: 250px;
+        }
     }
 
     

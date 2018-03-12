@@ -1,10 +1,13 @@
 .product-card
-    img.product-card__img(src="src/img/product.png", alt="product")
-    .product-card__details
-        span.product-card__name
-        span.product-card__price
-        .product-card__basket-likes
-            a.product-card__basket(href="#")
-                img.product-card__basket_icon(alt="card")
-            span.product-card__basket_text
-            a.product-card__likes(href="#")
+  .product-card__pict
+    img.product-card__img(src="src/img/product-card.png", alt="product")
+  .product-card__details
+    span.product-card__name T-shirt
+    span.product-card__price $250
+
+    .product-card__basket-likes
+      a.product-card__item(href="#")
+        img.product-card__icon(src="src/svg/basket.svg", alt="card")
+      span.product-card__add Add to cart
+      a.product-card__item(href="#")
+        img.product-card__icon(src="src/svg/heart.svg",alt="card")

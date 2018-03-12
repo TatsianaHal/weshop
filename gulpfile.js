@@ -5,7 +5,8 @@ const gulp = require('gulp'),
       pug = require('gulp-pug'),
 			notify = require("gulp-notify"),
 			plumber = require('gulp-plumber'),
-			autoprefixer = require('gulp-autoprefixer');
+      autoprefixer = require('gulp-autoprefixer'),
+      concat = require('gulp-concat');
 
 			gulp.task('sass', function() {
           return gulp.src('src/scss/*.scss') // Берем источник
@@ -25,6 +26,12 @@ const gulp = require('gulp'),
     		.pipe(pug({pretty: '\t'}))
     		.pipe(gulp.dest("./"))
     		.pipe(notify('Pug is compile!'));
+      });
+
+      gulp.task('scripts', function() {
+        return gulp.src('src/js/*.js')
+    		.pipe(concat(all.js))
+    		.pipe(gulp.dest("./"));
       });
 
 			gulp.task('watch', function(){

@@ -1,0 +1,14 @@
+section
+  .collection
+    .container
+        .row.row-around
+          .section-head
+            h3.section-head__title NEW COLLECTION
+            include ../components/_header-small
+
+          .collection__wrap.line                             
+            - for (var i = 1; i <= 4; i++)
+              include ../components/_sale-card
+          .collection__wrap.line                             
+            - for (var i = 1; i <= 4; i++)
+              include ../components/_sale-card

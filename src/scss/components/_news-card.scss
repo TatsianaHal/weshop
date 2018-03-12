@@ -1,6 +1,90 @@
 .news-card {
-    width: 520px;
-    height: 160px;
+    display: flex;
+    width: 45%;
+    padding-left: 30px;
 
-    background-color: $colour-white;
+    &__pict {
+        position: relative;
+
+        width: 250px;
+        margin-right: 25px;
+    }
+
+    &__pict::before {
+        content: "";
+
+        position: absolute;
+        top: -30px;
+        left: -30px;
+
+        width: 40px;
+        height: 40px;
+
+        border: 3px solid $color-blue;
+    }
+
+    &__pict::after {
+        content: "26 FEB";
+
+        position: absolute;
+        top: -20px;
+        left: -20px;
+
+        width: 40px;
+        height: 40px;
+
+        color: $colour-white;
+        text-align: center;
+
+        border: 3px solid $color-blue;
+        background-color: $color-blue;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: $f-s-sm;
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        font-size: $f-s-xs;
+    }
+
+    &__admin {
+        display: block;
+    }
+
+    &__socials {
+        display: flex;
+    }
+
+    &__social {
+        margin-right: 15px;
+    }
+
+    &__social:last-child {
+        margin-right: 0;
+    }
+
+    &__social_img {
+        width: 15px;
+    }
+
+    &__link {
+        font-size: $f-s-sm;
+    }
+
+    &__link:hover {
+        color: $color-blue;
+    }
+
+    
 }

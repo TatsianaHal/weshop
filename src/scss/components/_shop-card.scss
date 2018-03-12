@@ -1,12 +1,17 @@
 .shop-card {
     display: flex;
-    width: 850px;
+    width: 100%;
     padding: 40px 0 40px 0;
 
     border-bottom: 1px solid $colour-gray;
 
+    &__photo {
+        width: 40%;
+    }
+
     &__img {
-        display: block;
+        width: 100%;
+        height: auto;
     }
 
     &__details {
@@ -62,15 +67,17 @@
         border: 2px solid $color-blue;
     }
 
-    &__link:last-child {
-        margin-right: 0;
-    }
+    &__link::before {
+        content: "";
 
-    &__link_corner {
         position: absolute;
 
         border: 6px solid transparent;
         border-left: 6px solid $color-blue;
         border-top: 6px solid $color-blue;
+    }
+
+    &__link:last-child {
+        margin-right: 0;
     }
 }
