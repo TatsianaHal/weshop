@@ -2,25 +2,27 @@ section
 	.offers
 		.container
 			.row
-				.offers__wrap.line
-					.offers__stock
-						a.offers__stock_link.stock(href="#")  
-						span.stock__line.stock__line_first Men's t-shirt
-						br
-						span.stock__line.stock__line_big collection
-						br
-						span.stock__line.stock__line_wide 2016
-					.offers__stock
-						span.stock__line.stock__line_first 50% OFFER
-						br
-						span.stock__line.stock__line_second BELT
-						span.stock__line_blue  COLLECTION
-						br
-						a.stock__line.stock__line_link(href="#") See more...
+				.offers__wrap
+					.offers__content
+						.offers__stock
+							a.offers__stock_link.stock(href="#")  
+								span.stock__line.stock__line_first Men's t-shirt
+								br
+								span.stock__line.stock__line_big collection
+								br
+								span.stock__line.stock__line_wide 2016
+					.offers__content
+						.offers__stock
+							span.stock__line.stock__line_first 50% OFFER
+							br
+							span.stock__line.stock__line_second BELT
+							span.stock__line_blue  COLLECTION
+							br
+							a.stock__line.stock__line_link(href="#") See more...
 
 
 
-				.offers__wrap.line
+				.offers__wrap
 					-
 						var options= [{
 									name:'24/7 HOUR SUPPORT',
@@ -38,7 +40,7 @@ section
 
 
 
-				.offers__wrap.line
+				.offers__wrap
 					.offers__details
 						.offers__detail.offers__detail_first
 							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
@@ -53,6 +55,5 @@ section
 							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
 					.offers__details
 						span.offers__details_text MENS / LIFESTYLE
-						br
-						button.offers__details_link(href="#") 
+						a.offers__details_link(href="#") 
 							img.offers__details_arrow(src="src/svg/right-ar.svg", alt="later")

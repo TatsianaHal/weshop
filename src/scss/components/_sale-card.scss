@@ -1,8 +1,14 @@
 .card {
     position: relative;
 
-    width: 60%;
+    width: 100%;
     margin-bottom: 20px;
+    padding: 0 15px 0 15px;
+
+    &__pict {
+        display: block;
+        width: 100%;
+    }
 
     &__img {
         width: 100%;
@@ -12,7 +18,7 @@
     &__cost {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 15px;
         
         display: block;
         width: 50px;
@@ -23,6 +29,10 @@
         text-align: center;
 
         background-color: $color-blue;
+
+        @media(min-width: $sm){
+            left: 15px;
+        }
     }
 
     &__link {
@@ -55,11 +65,15 @@
     }
 
     &__link_view {
-        top: 100px;
-        right: 0;
+        top: 200px;
+        right: 15px;
+
+        @media(min-width: $xs){
+            
+        }
 
         @media(min-width: $sm){
-            top: 80px;  
+            top: 70px;    
         }
       
         @media(min-width: $md){
@@ -67,16 +81,20 @@
         }
 
         @media(min-width: $lg){
-            top: 200px;
+            top: 190px;
         }
     }
 
     &__link_like {
-        top: 150px;
-        right: 0;
+        top: 250px;
+        right: 15px;
+
+        @media(min-width: $xs){
+            
+        }
 
         @media(min-width: $sm){
-            top: 130px;  
+            top: 120px;  
         }
 
         @media(min-width: $md){
@@ -84,14 +102,14 @@
         }
 
         @media(min-width: $lg){
-            top: 250px;
+            top: 240px;
         }
     }
 
     &__text {
         position: absolute;
-        top: 200px;
-        right: 35px;
+        top: 300px;
+        right: 50px;
 
         display: block;
         width: 100px;
@@ -104,8 +122,12 @@
 
         background-color: $color-blue;
 
+        @media(min-width: $xs){
+            top: 290px;
+        }
+
         @media(min-width: $sm){
-            top: 180px;  
+            top: 170px;  
         }
 
         @media(min-width: $md){
@@ -113,16 +135,20 @@
         }
 
         @media(min-width: $lg){
-            top: 300px;
+            top: 290px;
         }
     }
 
     &__basket {
-        top: 200px;
-        right: 0;
+        top: 300px;
+        right: 15px;
+
+        @media(min-width: $xs){
+            top: 290px;
+        }
 
         @media(min-width: $sm){
-            top: 180px;  
+            top: 170px;  
         }
 
         @media(min-width: $md){
@@ -130,12 +156,18 @@
         }
 
         @media(min-width: $lg){
-            top: 300px;
+            top: 290px;
         }
     }
 
+    @media(min-width: $xs){
+        width: 50%; 
+    }
+
     @media(min-width: $sm){
-        width: 23%;  
+        width: 25%;  
+        margin-bottom: 0;
+        padding: 0 15px 0 15px;
     } 
 }
 

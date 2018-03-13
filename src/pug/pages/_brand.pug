@@ -2,7 +2,7 @@ section
   .brand
     .container
       .row
-        ul.brand__list
+        .brand__list
           -
             var brands= ["src/img/brand-1.png",
                         "src/img/brand-2.png", 
@@ -11,6 +11,5 @@ section
                         "src/img/brand-5.png", 
                         "src/img/brand-6.png"]
           each item in brands
-            li.brand__item
-              a.brand__link
-                img.brand__logo(src=item, alt="brand")
+            .brand__item
+              img.brand__logo(src=item, alt="brand")

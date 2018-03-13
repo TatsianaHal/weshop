@@ -6,16 +6,15 @@ section
             h3.section-head__title FEATURED
             include ../components/_header-small
 
-          .featured__wrap.line                  
+          .featured__wrap                 
             - for (var i = 1; i <= 4; i++)
               include ../components/_sale-card 
 
-          .featured__wrap.line  
+          .featured__wrap
             .featured__info
-              span.featured__info_line NEW
-              br
-              span.featured__info_line MEN'S COLLECTION
-              br
-              span.featured__info_line COMING SOON
+              .featured__content
+                span.featured__info_line NEW
+                span.featured__info_line MEN'S COLLECTION
+                span.featured__info_line COMING SOON
             .featured__info
               img.featured__img(src='src/img/featured.png', alt='picture')

@@ -1,14 +1,15 @@
 .news-card {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin-bottom: 50px;
-    padding-left: 30px;
+    padding: 0 15px 0 15px;
 
     &__pict {
         position: relative;
 
-        width: 250px;
+        width: 70%;
         margin-right: 25px;
+        padding-left: 45px;
     }
 
     &__pict::before {
@@ -16,7 +17,7 @@
 
         position: absolute;
         top: -30px;
-        left: -30px;
+        left: 5px;
 
         width: 40px;
         height: 40px;
@@ -29,7 +30,7 @@
 
         position: absolute;
         top: -20px;
-        left: -20px;
+        left: 20px;
 
         width: 40px;
         height: 40px;
@@ -39,6 +40,10 @@
 
         border: 3px solid $color-blue;
         background-color: $color-blue;
+    }
+
+    &__info {
+        padding-right: 15px;
     }
 
     &__img {
@@ -88,9 +93,15 @@
     }
 
     @media(min-width: $sm){
-        width: 45%; 
-        margin-bottom: 0; 
+        width: 50%;
+        padding: 0 15px 0 15px;
     } 
+}
+
+.news-card:nth-child(3) {
+    @media(min-width: $sm){
+        margin-bottom: 0;
+    }
 }
 
 .news-card:last-child {
