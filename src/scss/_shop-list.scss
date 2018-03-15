@@ -38,15 +38,11 @@
     padding-top: 90px;
 
     &__products {
-        width: 100%;
-        padding: 0 15px 0 15px;
+        width: calc(100% - 30px);
+        margin: 0 15px 0 15px;
 
         @media(min-width: $sm){
-            width: 60%;  
-        }
-
-        @media(min-width: $lg){
-            width: 80%;  
+            width: calc(70% - 30px);  
         }
     }
 
@@ -134,24 +130,19 @@
         margin-right: 0;
     }
 
-    &__footer_item:hover {
+    &__footer_link:hover {
         color: $color-blue;
     }
 
     &__aside {
         display: none;
-        padding: 0 15px 0 15px;
+        width: calc(30% - 30px);
+        margin: 0 15px 0 15px;
 
         font-size: $f-s-sm;
-
+        
         @media(min-width: $sm){
-            display: block;
-
-            width: 40%;  
-        }
-
-        @media(min-width: $lg){
-            width: 20%;  
+            display: block;        
         }
     }
 
@@ -224,6 +215,22 @@
 
     &__aside_interval {
         display: flex;
+    }
+
+    &__aside_input {
+        width: 30px;
+    }
+
+    &__aside_btn {
+        color: $color-blue;
+    }
+
+    &__aside_btn:hover {
+        color: #ffffff;
+
+        background-color: $color-blue;
+
+        transition: 1s;
     }
 
     &__aside_quant {

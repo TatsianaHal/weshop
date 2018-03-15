@@ -2,10 +2,10 @@
     display: flex;
     width: 100%;
     margin-bottom: 20px;
-    padding: 0 15px 0 15px;
 
     &__pict {
-        width: 20%;
+        display: block;
+        width: 70px;
         margin-right: 15px;
     }
 
@@ -22,9 +22,13 @@
         color: #424c55;
     }
 
+    &__name:hover {
+        color: $color-blue;
+    }
+
     &__price {
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
 
         font-size: $f-s-xs;
         color: $color-blue;
@@ -32,25 +36,37 @@
 
     &__basket-likes {
         display: flex;
+        height: 25px;
     }
 
-    &__item {
+    &__basket {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    &__basket_icon {
         display: block;
         width: 25px;
-        height: 25px;
 
         border: 1px solid #424c55;
     }
 
+    &__like {
+        display: block;
+        
+        border: 1px solid #424c55;
+    }
+
     &__icon {
-        width: 100%;
+        display: block;
+        width: 25px;
         height: auto;
     }
 
-    &__add {
-        display: block;
+    &__basket_add {
+        display: none;
         width: 90px;
-        margin-right: 15px;
+        height: 25px;
         padding-top: 5px;
 
         font-size: $f-s-xs;
@@ -58,6 +74,13 @@
         text-align: center;
 
         background-color: $color-blue;
+    }
+
+    &__basket:hover {
+
+        .product-card__basket_add {
+            display: block;
+        }
     }
 }
 

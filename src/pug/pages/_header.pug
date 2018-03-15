@@ -1,14 +1,13 @@
 header.header
   .container
     .row
-
-      .header__col.header__col_left
+      .header__col
         span.header__number (00)-123-456-789
         span.header__email  weshop@gmail.com 
         a.header__logo(href="#")
           img.header__logo_img(src='src/img/logo.png', alt='logo')
     
-      .header__col.header__col_center
+      .header__col
         form.header__search
           input.header__input(placeholder='White Shi')
           a.header__input_link(href="#") 
@@ -27,7 +26,7 @@ header.header
               li.header__nav-item
                 a.header__nav-link.header__link(href="#")= item
 
-      .header__col.header__col_right
+      .header__col
         ul.header__lang-cur-login
           -
             var langCurLogin = ["English", 

@@ -1,8 +1,7 @@
 .news-card {
     display: flex;
-    width: 100%;
-    margin-bottom: 50px;
-    padding: 0 15px 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 15px 50px 15px;
 
     &__pict {
         position: relative;
@@ -40,10 +39,6 @@
 
         border: 3px solid $color-blue;
         background-color: $color-blue;
-    }
-
-    &__info {
-        padding-right: 15px;
     }
 
     &__img {
@@ -93,8 +88,7 @@
     }
 
     @media(min-width: $sm){
-        width: 50%;
-        padding: 0 15px 0 15px;
+        width: calc(50% - 30px);
     } 
 }
 

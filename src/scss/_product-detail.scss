@@ -4,11 +4,11 @@
     background-color: $colour-light-gray;
 
     &__col {
-        width: 100%;
-        padding: 0 15px 0 15px;
+        width: calc(100% - 30px);
+        margin: 0 15px 0 15px;
 
         @media(min-width: $sm){
-            width: 50%;
+            width: calc(50% - 30px);
         }
     }
 
@@ -84,11 +84,14 @@
     }
 
     &__details {
-        display: flex;
         margin-bottom: 20px;
 
         font-size: $f-s-sm;
         color: #a3a3a4;
+
+        @media(min-width: $sm){
+            display: flex;
+        }
 
         @media(min-width: $sm){
             display: block;
@@ -242,7 +245,7 @@
 
     &__row {
         flex-direction: column;
-        padding: 0 20px 0 20px;
+        margin: 0 15px 0 15px;
     }
 
     &__text {
@@ -330,5 +333,23 @@
     &__wrap {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .card {
+        margin-bottom: 20px;
+
+        @media(min-width: $lg){
+            margin-bottom: 0;
+        }
+    }
+
+    .card:nth-child(3) {
+        @media(min-width: $xs){
+            margin-bottom: 0; 
+        }
+    }
+
+    .card:last-child {
+        margin-bottom: 0;
     }
 }

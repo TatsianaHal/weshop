@@ -1,9 +1,8 @@
 .card {
     position: relative;
 
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 15px 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 15px 20px 15px;
 
     &__pict {
         display: block;
@@ -18,9 +17,8 @@
     &__cost {
         position: absolute;
         top: 0;
-        left: 15px;
         
-        display: block;
+        display: none;
         width: 50px;
         height: 35px;
         padding-top: 10px;
@@ -29,10 +27,6 @@
         text-align: center;
 
         background-color: $color-blue;
-
-        @media(min-width: $sm){
-            left: 15px;
-        }
     }
 
     &__link {
@@ -65,12 +59,10 @@
     }
 
     &__link_view {
-        top: 200px;
-        right: 15px;
+        display: none;
 
-        @media(min-width: $xs){
-            
-        }
+        top: 200px;
+        right: 0;
 
         @media(min-width: $sm){
             top: 70px;    
@@ -86,12 +78,10 @@
     }
 
     &__link_like {
-        top: 250px;
-        right: 15px;
+        display: none;
 
-        @media(min-width: $xs){
-            
-        }
+        top: 250px;
+        right: 0;
 
         @media(min-width: $sm){
             top: 120px;  
@@ -109,9 +99,9 @@
     &__text {
         position: absolute;
         top: 300px;
-        right: 50px;
+        right: 35px;
 
-        display: block;
+        display: none;
         width: 100px;
         height: 35px;
         padding-top: 8px; 
@@ -141,7 +131,7 @@
 
     &__basket {
         top: 300px;
-        right: 15px;
+        right: 0;
 
         @media(min-width: $xs){
             top: 290px;
@@ -160,20 +150,41 @@
         }
     }
 
+    &__details:hover {
+        .card__cost {
+            display: block;
+        }
+
+        .card__link_view {
+            display: block;
+        }
+
+        .card__link_like {
+            display: block;
+        }
+
+        .card__text {
+            display: block;
+        }
+    }
+
     @media(min-width: $xs){
-        width: 50%; 
+        width: calc(50% - 30px); 
     }
 
     @media(min-width: $sm){
-        width: 25%;  
-        margin-bottom: 0;
-        padding: 0 15px 0 15px;
+        width: calc(33% - 30px);     
     } 
+
+    @media(min-width: $md){
+        width: calc(25% - 30px); 
+        margin-bottom: 0; 
+    }
 }
 
-.card:last-child {
-    margin-bottom: 0;
-}
+
+
+
 
 
 

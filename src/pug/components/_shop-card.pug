@@ -1,8 +1,8 @@
 .shop-card
-  .shop-card__photo
+  a.shop-card__photo(href="#")
     img.shop-card__img(src="src/img/shop-card.png", alt="photo")
   .shop-card__details
-    span.shop-card__title HILFIGER DENIM T-SHIRTS MEN.
+    a.shop-card__title(href="#") HILFIGER DENIM T-SHIRTS MEN.
     span.shop-card__price $289
     .shop-card__availab-rating
         span.shop-card__availab Availavility:
@@ -21,6 +21,8 @@
 
       a.shop-card__link.shop-card__link_view(href="#")
         img.shop-card__icon(src="src/svg/eye.svg", alt="card")
+
+      span.shop-card__add Add to cart
 
       a.shop-card__link.shop-card__basket(href="#")
         img.shop-card__icon(src="src/svg/basket.svg", alt="card")

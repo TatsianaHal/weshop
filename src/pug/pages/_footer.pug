@@ -1,76 +1,73 @@
 footer.footer
   .container
-      .row
-        .footer__wrap.line
-          .footer__col
-            .footer__item
-              a.footer__logo(href="#")
-                img.footer__logo_img(src="src/img/logo.png", alt="logo")
-              p.footer__item_about USA most-loved online fashion store featuring new details.
-              br
-              p.footer__item_about When it comes to trend, we all love being in it- Seeping every bit of it in WESHOP.com
-            .footer__item.footer__item_support
-              span.footer__item_title SUPPORT
-              br
-              br
-              span.footer__item_about How to Older?
-              br
-              span.footer__item_about Payments
-              br
-              span.footer__item_about Assistance
-              br
-              span.footer__item_about Delivery
-          .footer__col
-            .footer__item.footer__item_duties
-              span.footer__item_title DUTIES
-              br
-              br
-              span.footer__item_about Terms and Conditions
-              br
-              span.footer__item_about Shop Policy
-              br
-              span.footer__item_about Contact Us
-            .footer__item
-              span.footer__item_title INSTAGRAM FEED
-              br
-              br
-              .footer__insta
-                .footer__insta_col
-                  -
-                    var insta= ["src/img/insta.png",  
-                                "src/img/insta.png"]
-                  each item in insta 
-                    .footer__insta_imgs
-                      img.footer__insta_img(src=item, alt="insta")
-                .footer__insta_col     
-                  -
-                    var insta= ["src/img/insta.png",  
-                                "src/img/insta.png"]
-                  each item in insta 
-                    .footer__insta_imgs
-                      img.footer__insta_img(src=item, alt="insta")
-                                
-              .footer__item_cards 
-                -
-                  var cards= ["src/img/credit-card.png",
-                              "src/img/credit-card.png", 
-                              "src/img/credit-card.png", 
-                              "src/img/credit-card.png", 
-                              "src/img/credit-card.png"]
-                each item in cards  
-                  img.footer__item_card(src=item, alt="card")
-            
-        ul.footer__socials
+    .row
+      .footer__item
+        a.footer__logo(href="#")
+          img.footer__logo_img(src="src/img/logo.png", alt="logo")
+        p.footer__item_about USA most-loved online fashion store featuring new details.
+        br
+        p.footer__item_about When it comes to trend, we all love being in it- Seeping every bit of it in WESHOP.com
+      .footer__item
+        span.footer__item_title SUPPORT
+        br
+        br
+        span.footer__item_about How to Older?
+        br
+        span.footer__item_about Payments
+        br
+        span.footer__item_about Assistance
+        br
+        span.footer__item_about Deliver
+      .footer__item
+        span.footer__item_title DUTIES
+        br
+        br
+        span.footer__item_about Terms and Conditions
+        br
+        span.footer__item_about Shop Policy
+        br
+        span.footer__item_about Contact Us
+      .footer__item
+        span.footer__item_title INSTAGRAM FEED
+        br
+        br
+        .footer__insta
+          .footer__insta_col
+            -
+              var insta= ["src/img/insta.png",  
+                          "src/img/insta.png"]
+            each item in insta 
+              .footer__insta_imgs
+                img.footer__insta_img(src=item, alt="insta")
+          .footer__insta_col     
+            -
+              var insta= ["src/img/insta.png",  
+                          "src/img/insta.png"]
+            each item in insta 
+              .footer__insta_imgs
+                img.footer__insta_img(src=item, alt="insta")
+                          
+        .footer__item_cards 
           -
-            var socials= ["src/svg/facebook.svg",
-                          "src/svg/twitter.svg", 
-                          "src/svg/linkedin.svg", 
-                          "src/svg/youtube.svg",  
-                          "src/svg/google-plus.svg"]
-          each item in socials
-            li.footer__social
-              a.footer__social_link(href="#")
-                img.footer__social_img(src=item, alt="social")
+            var cards= ["src/img/credit-card.png",
+                        "src/img/credit-card.png", 
+                        "src/img/credit-card.png", 
+                        "src/img/credit-card.png", 
+                        "src/img/credit-card.png"]
+          each item in cards  
+            img.footer__item_card(src=item, alt="card")
+      
+  ul.footer__socials
+    -
+      var socials= ["src/svg/facebook.svg",
+                    "src/svg/twitter.svg", 
+                    "src/svg/linkedin.svg", 
+                    "src/svg/youtube.svg",  
+                    "src/svg/google-plus.svg"]
+    each item in socials
+      li.footer__social
+        a.footer__social_link(href="#")
+          img.footer__social_img(src=item, alt="social")
       
   span.footer__copyright Copyrights MOHAMMAD SHOAHG. All rights researved 2016
 
