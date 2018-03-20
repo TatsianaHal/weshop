@@ -44,13 +44,6 @@
         margin-right: 15px;
     }
 
-    &__basket_icon {
-        display: block;
-        width: 25px;
-
-        border: 1px solid #424c55;
-    }
-
     &__like {
         display: block;
         
@@ -61,9 +54,11 @@
         display: block;
         width: 25px;
         height: auto;
+
+        border: 1px solid #424c55;
     }
 
-    &__basket_add {
+    &__basket-add {
         display: none;
         width: 90px;
         height: 25px;
@@ -76,9 +71,9 @@
         background-color: $color-blue;
     }
 
-    &__basket:hover {
+    &__basket-likes:hover {
 
-        .product-card__basket_add {
+        .product-card__basket-add {
             display: block;
         }
     }

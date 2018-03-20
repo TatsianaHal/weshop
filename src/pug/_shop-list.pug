@@ -13,8 +13,15 @@ html(lang='en')
       .shop-head
         .container
           .shop-head__row.row
-            span.shop-head__crumbs Home>shop
-            h1.sshop-head__title PRODUCT  
+            ul.shop-head__breadcrumbs
+              -
+                var breadCrumbs = ["Home >", 
+                                  "shop"]
+              each item in breadCrumbs                 
+                li.shop-head__breadcrumbs-item
+                  a.shop-head__breadcrumbs-link(href="#")= item
+            
+            h1.shop-head__title PRODUCT  
 
     include pages/_shop  
     include pages/_product

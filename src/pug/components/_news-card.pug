@@ -1,6 +1,10 @@
 .news-card
   .news-card__pict
     img.news-card__img(src="src/img/news-card.png", alt="card")
+    .news-card__date
+      span.news-card__date-day 26
+      br
+      span.news-card__date-day FEB
   .news-card__info
     p.news-card__title 4 DENIM SHAPES WORTH HANG-ING UP YOUR SKINNY JEANS
     .news-card__contact
@@ -12,17 +16,17 @@
                         "src/svg/google-plus.svg"]
         each item in socials
           li.news-card__social
-            a.fnews-card__social_link(href="#")
-              img.news-card__social_img(src=item, alt="social")
+            a.news-card__social-link(href="#")
+              img.news-card__social-img(src=item, alt="social")
 
 
 
 
 
         li.news-card__link
-          a.news-card__link.news-card__link_facebook(href="#")
+          a.news-card__link_facebook(href="#")
         li.news-card__link
-          a.news-card__link.news-card__link_twitter(href="#")
+          a.news-card__link_twitter(href="#")
         li.news-card__link
-          a.news-card__link.news-card__link_google(href="#")
+          a.news-card__link_google(href="#")
     a.news-card__link(href="#") Read full article...

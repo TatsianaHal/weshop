@@ -3,23 +3,22 @@ section
 		.container
 			.row
 				.offers__wrap
-					.offers__content
-						.offers__stock
-							a.offers__stock_link.stock(href="#")  
-								span.stock__line.stock__line_first Men's t-shirt
-								br
-								span.stock__line.stock__line_big collection
-								br
-								span.stock__line.stock__line_wide 2016
-					.offers__content
-						.offers__stock
-							span.stock__line.stock__line_first 50% OFFER
+					a.offers__col_lg(href="#")
+						p.offers__stock.offers__stock_left
+							span.offers__title Men's t-shirt
 							br
-							span.stock__line.stock__line_second BELT
-							span.stock__line_blue  COLLECTION
+							span.offers__subtitle collection
 							br
-							a.stock__line.stock__line_link(href="#") See more...
+							span.offers__year 2016
 
+					a.offers__col_lg(href="#")
+						p.offers__stock.offers__stock_right
+							span.offers__title 50% OFFER
+							br
+							span.offers__subtitle BELT
+								span.offers__subtitle_blue  COLLECTION
+							br
+							span.offers__link(href="#") See more...
 
 
 				.offers__wrap
@@ -33,27 +32,26 @@ section
 									text:"Our online support section is available and regularly updated if you'd prefer."}
 									]
 					each item in options
-						.offers__option
-							.offers__option_info
-								span.offers__option_name= item.name   
-								p.offers__option_text= item.text
-
+						.offers__col_sm
+							.offers__info
+								span.offers__name= item.name   
+								p.offers__text= item.text
 
 
 				.offers__wrap
-					.offers__details
+					.offers__col_md
 						.offers__detail.offers__detail_first
-							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
+							img.offers__pict(src='src/img/offers.png', alt='picture')
 						.offers__detail.offers__detail_second
-							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
-							a.offers__detail_btn.btn.btn-big(href="#")
+							img.offers__pict(src='src/img/offers.png', alt='picture')
+							a.offers__btn.btn.btn-big(href="#")
 								span.btn-text SHOP NOW
-					.offers__details
+					.offers__col_md
 						.offers__detail.offers__detail_third   
-							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
+							img.offers__pict(src='src/img/offers.png', alt='picture')
 						.offers__detail.offers__detail_fourth
-							img.offers__detail_pict(src='src/img/offers.png', alt='picture')
-					.offers__details
-						span.offers__details_text MENS / LIFESTYLE
-						a.offers__details_link(href="#") 
-							img.offers__details_arrow(src="src/svg/right-ar.svg", alt="later")
+							img.offers__pict(src='src/img/offers.png', alt='picture')
+					.offers__col_md
+						span.offers__details-text MENS / LIFESTYLE
+						a.offers__arrow(href="#") 
+							img.offers__arrow_blue(src="src/svg/right-ar.svg", alt="later")

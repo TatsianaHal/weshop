@@ -5,42 +5,42 @@ section
 
         .products__col
           .products__picture
-            button.products__slider.products__slider_left(href="#")
+            a.products__slider.products__slider_left(href="#")
               img.products__slider_left-icon(src="src/svg/right-ar.svg", alt="before")
-            button.products__slider.products__slider_right(href="#")
+            a.products__slider.products__slider_right(href="#")
               img.products__slider_next-icon(src="src/svg/right-ar.svg", alt="after")
           .products__picture
 
-        .products__col.products__info
+        .products__info.products__col
           span.products__price $589
           span.products__name Star Wars Boy's The Force Awakens Character Match Up T-Shirt
           .products__rating
-            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-            img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+            img.products__stars(src="src/svg/star.svg", alt="stars")
+            img.products__stars(src="src/svg/star.svg", alt="stars")
+            img.products__stars(src="src/svg/star.svg", alt="stars")
+            img.products__stars(src="src/svg/star.svg", alt="stars")
+            img.products__stars(src="src/svg/star.svg", alt="stars")
             a.products__review(href="#") Add review
           p.products__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irrure dolor in reprehenderit in voluptate velit.
 
           .products__details
 
-            .products__detail.products__things
-              button.products__things_link(href="#")
-                img.minus(src="src/svg/minus.svg", alt="less")
-              input.products__things_numb(type='text' name='name' placeholder='20')
-              button.products__things_link(href="#")
-                img.plus(src="src/svg/plus.svg", alt="more")
+            .products__detail
+              button.products__detail-link(href="#")
+                img.products__detail-minus(src="src/svg/minus.svg", alt="less")
+              input.products__detail-numb(type='text' name='name' placeholder='20')
+              button.products__detail-link(href="#")
+                img.products__detail-plus(src="src/svg/plus.svg", alt="more")
 
             .products__detail
               span.products__text Size
               button.products__arrow(href="#")
-                img.products__arrow_icon(src="src/svg/down.svg", alt="more")
+                img.products__arrow_black(src="src/svg/down.svg", alt="more")
 
             .products__detail
               span.products__text Color
               button.products__arrow(href="#")
-                img.products__arrow_icon(src="src/svg/down.svg", alt="more")
+                img.products__arrow_black(src="src/svg/down.svg", alt="more")
 
           .products__btns
             a.products__btn.btn.btn-big(href="#")
@@ -55,6 +55,6 @@ section
                             "src/svg/linkedin.svg",  
                             "src/svg/google-plus.svg"]
             each item in socials
-              li.products__social
-                a.products__social_link(href="#")
-                   img.products__social_img(src=item, alt="social")
+              li.products__socials-item
+                a.products__socials-link(href="#")
+                   img.products__socials-img(src=item, alt="social")

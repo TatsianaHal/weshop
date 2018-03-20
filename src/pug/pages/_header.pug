@@ -5,15 +5,15 @@ header.header
         span.header__number (00)-123-456-789
         span.header__email  weshop@gmail.com 
         a.header__logo(href="#")
-          img.header__logo_img(src='src/img/logo.png', alt='logo')
+          img.header__logo-img(src='src/img/logo.png', alt='logo')
     
       .header__col
         form.header__search
           input.header__input(placeholder='White Shi')
-          a.header__input_link(href="#") 
+          button.header__input-link(href="#") 
 
         nav.header__main-nav
-          ul.header__nav-list
+          ul.header__main-nav-list
             -
               var mainNav = ["Home", 
                              "Shop", 
@@ -23,21 +23,21 @@ header.header
                              "Blog", 
                              "Contact us"]
             each item in mainNav                 
-              li.header__nav-item
-                a.header__nav-link.header__link(href="#")= item
+              li.header__main-nav-item
+                a.header__main-nav-link.header__link(href="#")= item
 
       .header__col
-        ul.header__lang-cur-login
+        ul.header__nav
           -
             var langCurLogin = ["English", 
                                 "USD", 
                                 "Login"]
           each item in langCurLogin                 
-            li.header__lang-cur-login_item
-              a.header__lang-cur-login_link.header__link(href="#")= item
+            li.header__nav-item
+              a.header__nav-link.header__link(href="#")= item
        
         .header__basket
-          a.header__basket_link(href="#")
-            span.header__basket_quant 2
+          a.header__basket-link(href="#")
+            span.header__basket-quant 2
           .header__price
-            span.header__price_numb $25.00
+            span.header__price-numb $25.00

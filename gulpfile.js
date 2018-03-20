@@ -6,6 +6,7 @@ const gulp = require('gulp'),
 			notify = require("gulp-notify"),
 			plumber = require('gulp-plumber'),
       autoprefixer = require('gulp-autoprefixer'),
+      svgSprite = require('gulp-svg-sprite'),
       concat = require('gulp-concat');
 
 			gulp.task('sass', function() {
@@ -37,6 +38,12 @@ const gulp = require('gulp'),
 			gulp.task('watch', function(){
 				gulp.watch('src/scss/*.scss', ['sass']);
         gulp.watch('src/pug/*.pug', ['pug']);
+      });
+      
+      gulp.task('svg-sprite', function(){
+        return gulp.src('src/svg/*.svg')
+				.pipe(svgSprite(config))
+    		.pipe(gulp.dest("src"));
 			});
 
       gulp.task('default', ['sass', 'pug', 'watch']);

@@ -24,9 +24,12 @@
         border: 3px solid $color-blue;
     }
 
-    &__pict::after {
-        content: "26 FEB";
+    &__img {
+        width: 100%;
+        height: auto;
+    }
 
+    &__date {
         position: absolute;
         top: -20px;
         left: 20px;
@@ -41,10 +44,7 @@
         background-color: $color-blue;
     }
 
-    &__img {
-        width: 100%;
-        height: auto;
-    }
+    
 
     &__title {
         margin-bottom: 15px;
@@ -75,7 +75,7 @@
         margin-right: 0;
     }
 
-    &__social_img {
+    &__social-img {
         width: 15px;
     }
 

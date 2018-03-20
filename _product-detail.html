@@ -10,31 +10,32 @@
 		<header class="header">
 			<div class="container">
 				<div class="row">
-					<div class="header__col"><span class="header__number">(00)-123-456-789</span><span class="header__email"> weshop@gmail.com </span><a class="header__logo" href="#"><img class="header__logo_img" src="src/img/logo.png" alt="logo"></a></div>
+					<div class="header__col"><span class="header__number">(00)-123-456-789</span><span class="header__email"> weshop@gmail.com </span><a class="header__logo" href="#"><img class="header__logo-img" src="src/img/logo.png" alt="logo"></a></div>
 					<div class="header__col">
 						<form class="header__search">
-							<input class="header__input" placeholder="White Shi"><a class="header__input_link" href="#"> </a>
+							<input class="header__input" placeholder="White Shi">
+							<button class="header__input-link" href="#"> </button>
 						</form>
 						<nav class="header__main-nav">
-							<ul class="header__nav-list">
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Home</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Shop</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Men</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Women</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Page</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Blog</a></li>
-								<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Contact us</a></li>
+							<ul class="header__main-nav-list">
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Home</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Shop</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Men</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Women</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Page</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Blog</a></li>
+								<li class="header__main-nav-item"><a class="header__main-nav-link header__link" href="#">Contact us</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="header__col">
-						<ul class="header__lang-cur-login">
-							<li class="header__lang-cur-login_item"><a class="header__lang-cur-login_link header__link" href="#">English</a></li>
-							<li class="header__lang-cur-login_item"><a class="header__lang-cur-login_link header__link" href="#">USD</a></li>
-							<li class="header__lang-cur-login_item"><a class="header__lang-cur-login_link header__link" href="#">Login</a></li>
+						<ul class="header__nav">
+							<li class="header__nav-item"><a class="header__nav-link header__link" href="#">English</a></li>
+							<li class="header__nav-item"><a class="header__nav-link header__link" href="#">USD</a></li>
+							<li class="header__nav-item"><a class="header__nav-link header__link" href="#">Login</a></li>
 						</ul>
-						<div class="header__basket"><a class="header__basket_link" href="#"><span class="header__basket_quant">2</span></a>
-							<div class="header__price"><span class="header__price_numb">$25.00</span></div>
+						<div class="header__basket"><a class="header__basket-link" href="#"><span class="header__basket-quant">2</span></a>
+							<div class="header__price"><span class="header__price-numb">$25.00</span></div>
 						</div>
 					</div>
 				</div>
@@ -43,7 +44,12 @@
 		<section>
 			<div class="shop-head">
 				<div class="container">
-					<div class="shop-head__row row"><span class="shop-head__crumbs">Home>shop>details</span>
+					<div class="shop-head__row row">
+						<ul class="shop-head__breadcrumbs">
+							<li class="shop-head__breadcrumbs-item"><a class="shop-head__breadcrumbs-link" href="#">Home &gt;</a></li>
+							<li class="shop-head__breadcrumbs-item"><a class="shop-head__breadcrumbs-link" href="#">shop &gt;</a></li>
+							<li class="shop-head__breadcrumbs-item"><a class="shop-head__breadcrumbs-link" href="#">details</a></li>
+						</ul>
 						<h1 class="shop-head__title">PRODUCT DETAILS</h1>
 					</div>
 				</div>
@@ -54,34 +60,31 @@
 				<div class="container">
 					<div class="row">
 						<div class="products__col">
-							<div class="products__picture">
-								<button class="products__slider products__slider_left" href="#"><img class="products__slider_left-icon" src="src/svg/right-ar.svg" alt="before"></button>
-								<button class="products__slider products__slider_right" href="#"><img class="products__slider_next-icon" src="src/svg/right-ar.svg" alt="after"></button>
-							</div>
+							<div class="products__picture"><a class="products__slider products__slider_left" href="#"><img class="products__slider_left-icon" src="src/svg/right-ar.svg" alt="before"></a><a class="products__slider products__slider_right" href="#"><img class="products__slider_next-icon" src="src/svg/right-ar.svg" alt="after"></a></div>
 							<div class="products__picture"></div>
 						</div>
-						<div class="products__col products__info"><span class="products__price">$589</span><span class="products__name">Star Wars Boy's The Force Awakens Character Match Up T-Shirt</span>
-							<div class="products__rating"><img class="aside__card_stars" src="src/svg/star.svg" alt="stars"><img class="aside__card_stars" src="src/svg/star.svg" alt="stars"><img class="aside__card_stars" src="src/svg/star.svg" alt="stars"><img class="aside__card_stars" src="src/svg/star.svg" alt="stars"><img class="aside__card_stars" src="src/svg/star.svg" alt="stars"><a class="products__review" href="#">Add review</a></div>
+						<div class="products__info products__col"><span class="products__price">$589</span><span class="products__name">Star Wars Boy's The Force Awakens Character Match Up T-Shirt</span>
+							<div class="products__rating"><img class="products__stars" src="src/svg/star.svg" alt="stars"><img class="products__stars" src="src/svg/star.svg" alt="stars"><img class="products__stars" src="src/svg/star.svg" alt="stars"><img class="products__stars" src="src/svg/star.svg" alt="stars"><img class="products__stars" src="src/svg/star.svg" alt="stars"><a class="products__review" href="#">Add review</a></div>
 							<p class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irrure dolor in reprehenderit in voluptate velit.</p>
 							<div class="products__details">
-								<div class="products__detail products__things">
-									<button class="products__things_link" href="#"><img class="minus" src="src/svg/minus.svg" alt="less"></button>
-									<input class="products__things_numb" type="text" name="name" placeholder="20">
-									<button class="products__things_link" href="#"><img class="plus" src="src/svg/plus.svg" alt="more"></button>
+								<div class="products__detail">
+									<button class="products__detail-link" href="#"><img class="products__detail-minus" src="src/svg/minus.svg" alt="less"></button>
+									<input class="products__detail-numb" type="text" name="name" placeholder="20">
+									<button class="products__detail-link" href="#"><img class="products__detail-plus" src="src/svg/plus.svg" alt="more"></button>
 								</div>
 								<div class="products__detail"><span class="products__text">Size</span>
-									<button class="products__arrow" href="#"><img class="products__arrow_icon" src="src/svg/down.svg" alt="more"></button>
+									<button class="products__arrow" href="#"><img class="products__arrow_black" src="src/svg/down.svg" alt="more"></button>
 								</div>
 								<div class="products__detail"><span class="products__text">Color</span>
-									<button class="products__arrow" href="#"><img class="products__arrow_icon" src="src/svg/down.svg" alt="more"></button>
+									<button class="products__arrow" href="#"><img class="products__arrow_black" src="src/svg/down.svg" alt="more"></button>
 								</div>
 							</div>
 							<div class="products__btns"><a class="products__btn btn btn-big" href="#"><span class="btn-text">ADD TO CART</span></a><a class="products__btn btn btn-big" href="#"><span class="btn-text">ADD TO WISHLIST</span></a></div><span class="products__share">SHARE</span>
 							<ul class="products__socials">
-								<li class="products__social"><a class="products__social_link" href="#"><img class="products__social_img" src="src/svg/facebook.svg" alt="social"></a></li>
-								<li class="products__social"><a class="products__social_link" href="#"><img class="products__social_img" src="src/svg/twitter.svg" alt="social"></a></li>
-								<li class="products__social"><a class="products__social_link" href="#"><img class="products__social_img" src="src/svg/linkedin.svg" alt="social"></a></li>
-								<li class="products__social"><a class="products__social_link" href="#"><img class="products__social_img" src="src/svg/google-plus.svg" alt="social"></a></li>
+								<li class="products__socials-item"><a class="products__socials-link" href="#"><img class="products__socials-img" src="src/svg/facebook.svg" alt="social"></a></li>
+								<li class="products__socials-item"><a class="products__socials-link" href="#"><img class="products__socials-img" src="src/svg/twitter.svg" alt="social"></a></li>
+								<li class="products__socials-item"><a class="products__socials-link" href="#"><img class="products__socials-img" src="src/svg/linkedin.svg" alt="social"></a></li>
+								<li class="products__socials-item"><a class="products__socials-link" href="#"><img class="products__socials-img" src="src/svg/google-plus.svg" alt="social"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -92,7 +95,7 @@
 			<div class="review">
 				<div class="review__head">
 					<div class="container">
-						<div class="row row-around"><a class="review__head_title" href="#">DESCRIPTION</a><a class="review__head_title" href="#">HISTORY</a><a class="review__head_title" href="#">HISTORY</a></div>
+						<div class="row row-around"><a class="review__title" href="#">DESCRIPTION</a><a class="review__title" href="#">HISTORY</a><a class="review__title" href="#">HISTORY</a></div>
 					</div>
 				</div>
 				<div class="review__body">
@@ -100,9 +103,9 @@
 						<div class="review__row row">
 							<p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisining elt, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
 							<p class="review__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu figuat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-							<div class="review__cat"><span class="review__cat_text">Cotton</span><span class="review__cat_text">70%</span></div>
+							<div class="review__cat"><span class="review__detail">Cotton</span><span class="review__detail">70%</span></div>
 							<div class="review__slider"></div>
-							<div class="review__cat"><span class="review__cat_text">Ulk</span><span class="review__cat_text">50%</span></div>
+							<div class="review__cat"><span class="review__detail">Ulk</span><span class="review__detail">50%</span></div>
 							<div class="review__slider"></div>
 						</div>
 					</div>
@@ -113,23 +116,25 @@
 			<div class="related-items">
 				<div class="container">
 					<div class="row related-items__row">
-						<h3 class="related-items__title">Related Items</h3>
-						<button class="related-items__slider related-items__slider_prev" href="#"><img class="related-items__slider_prev-icon" src="src/svg/right-ar.svg" alt="before"></button>
+						<h3 class="related-items__title">Related Items</h3><a class="related-items__slider related-items__slider_prev" href="#"><img class="related-items__slider_prev-icon" src="src/svg/right-ar.svg" alt="before"></a>
 						<div class="related-items__wrap">                          
 							<div class="card"> <a class="card__pict" href="#"><img class="card__img" src="src/img/sale-card.png" alt="picture"></a>
-								<div class="card__details"><span class="card__cost">$500</span><a class="card__link card__link_view" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link card__link_like" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><span class="card__text">Add to cart</span><a class="card__link card__basket" href="#"><img class="card__icon" src="src/svg/basket.svg" alt="card"></a></div>
+								<div class="card__details"><span class="card__cost">$500</span><a class="card__link-view card__link" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link-like card__link" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><a class="card__link-basket" href="#"><span class="card__basket-text">Add to cart</span>
+										<div class="card__basket-btn"><img class="card__icon" src="src/svg/basket.svg" alt="card"></div></a></div>
 							</div>
 							<div class="card"> <a class="card__pict" href="#"><img class="card__img" src="src/img/sale-card.png" alt="picture"></a>
-								<div class="card__details"><span class="card__cost">$500</span><a class="card__link card__link_view" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link card__link_like" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><span class="card__text">Add to cart</span><a class="card__link card__basket" href="#"><img class="card__icon" src="src/svg/basket.svg" alt="card"></a></div>
+								<div class="card__details"><span class="card__cost">$500</span><a class="card__link-view card__link" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link-like card__link" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><a class="card__link-basket" href="#"><span class="card__basket-text">Add to cart</span>
+										<div class="card__basket-btn"><img class="card__icon" src="src/svg/basket.svg" alt="card"></div></a></div>
 							</div>
 							<div class="card"> <a class="card__pict" href="#"><img class="card__img" src="src/img/sale-card.png" alt="picture"></a>
-								<div class="card__details"><span class="card__cost">$500</span><a class="card__link card__link_view" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link card__link_like" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><span class="card__text">Add to cart</span><a class="card__link card__basket" href="#"><img class="card__icon" src="src/svg/basket.svg" alt="card"></a></div>
+								<div class="card__details"><span class="card__cost">$500</span><a class="card__link-view card__link" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link-like card__link" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><a class="card__link-basket" href="#"><span class="card__basket-text">Add to cart</span>
+										<div class="card__basket-btn"><img class="card__icon" src="src/svg/basket.svg" alt="card"></div></a></div>
 							</div>
 							<div class="card"> <a class="card__pict" href="#"><img class="card__img" src="src/img/sale-card.png" alt="picture"></a>
-								<div class="card__details"><span class="card__cost">$500</span><a class="card__link card__link_view" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link card__link_like" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><span class="card__text">Add to cart</span><a class="card__link card__basket" href="#"><img class="card__icon" src="src/svg/basket.svg" alt="card"></a></div>
+								<div class="card__details"><span class="card__cost">$500</span><a class="card__link-view card__link" href="#"><img class="card__icon" src="src/svg/eye.svg" alt="card"></a><a class="card__link-like card__link" href="#"><img class="card__icon" src="src/svg/heart.svg" alt="card"></a><a class="card__link-basket" href="#"><span class="card__basket-text">Add to cart</span>
+										<div class="card__basket-btn"><img class="card__icon" src="src/svg/basket.svg" alt="card"></div></a></div>
 							</div>
-						</div>
-						<button class="related-items__slider related-items__slider_next" href="#"> <img class="related-items__slider_next-icon" src="src/svg/right-ar.svg" alt="after"></button>
+						</div><a class="related-items__slider related-items__slider_next" href="#"> <img class="related-items__slider_next-icon" src="src/svg/right-ar.svg" alt="after"></a>
 					</div>
 				</div>
 			</div>
@@ -153,34 +158,34 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
-					<div class="footer__item"><a class="footer__logo" href="#"><img class="footer__logo_img" src="src/img/logo.png" alt="logo"></a>
-						<p class="footer__item_about">USA most-loved online fashion store featuring new details.</p><br>
-						<p class="footer__item_about">When it comes to trend, we all love being in it- Seeping every bit of it in WESHOP.com</p>
+					<div class="footer__col"><a class="footer__logo" href="#"><img class="footer__img" src="src/img/logo.png" alt="logo"></a>
+						<p class="footer__about">USA most-loved online fashion store featuring new details.</p><br>
+						<p class="footer__about">When it comes to trend, we all love being in it- Seeping every bit of it in WESHOP.com</p>
 					</div>
-					<div class="footer__item"><span class="footer__item_title">SUPPORT</span><br><br><span class="footer__item_about">How to Older?</span><br><span class="footer__item_about">Payments</span><br><span class="footer__item_about">Assistance</span><br><span class="footer__item_about">Deliver</span></div>
-					<div class="footer__item"><span class="footer__item_title">DUTIES</span><br><br><span class="footer__item_about">Terms and Conditions</span><br><span class="footer__item_about">Shop Policy</span><br><span class="footer__item_about">Contact Us</span></div>
-					<div class="footer__item"><span class="footer__item_title">INSTAGRAM FEED</span><br><br>
+					<div class="footer__col"><span class="footer__title">SUPPORT</span><br><br><span class="footer__about">How to Older?</span><br><span class="footer__about">Payments</span><br><span class="footer__about">Assistance</span><br><span class="footer__about">Deliver</span></div>
+					<div class="footer__col"><span class="footer__title">DUTIES</span><br><br><span class="footer__about">Terms and Conditions</span><br><span class="footer__about">Shop Policy</span><br><span class="footer__about">Contact Us</span></div>
+					<div class="footer__col"><span class="footer__title">INSTAGRAM FEED</span><br><br>
 						<div class="footer__insta">
-							<div class="footer__insta_col">
-								<div class="footer__insta_imgs"><img class="footer__insta_img" src="src/img/insta.png" alt="insta"></div>
-								<div class="footer__insta_imgs"><img class="footer__insta_img" src="src/img/insta.png" alt="insta"></div>
+							<div class="footer__col_sm">
+								<div class="footer__imgs"><img class="footer__pict" src="src/img/insta.png" alt="insta"></div>
+								<div class="footer__imgs"><img class="footer__pict" src="src/img/insta.png" alt="insta"></div>
 							</div>
-							<div class="footer__insta_col">    
-								<div class="footer__insta_imgs"><img class="footer__insta_img" src="src/img/insta.png" alt="insta"></div>
-								<div class="footer__insta_imgs"><img class="footer__insta_img" src="src/img/insta.png" alt="insta"></div>
+							<div class="footer__col_sm">    
+								<div class="footer__imgs"><img class="footer__pict" src="src/img/insta.png" alt="insta"></div>
+								<div class="footer__imgs"><img class="footer__pict" src="src/img/insta.png" alt="insta"></div>
 							</div>
 						</div>
-						<div class="footer__item_cards"> <img class="footer__item_card" src="src/img/credit-card.png" alt="card"><img class="footer__item_card" src="src/img/credit-card.png" alt="card"><img class="footer__item_card" src="src/img/credit-card.png" alt="card"><img class="footer__item_card" src="src/img/credit-card.png" alt="card"><img class="footer__item_card" src="src/img/credit-card.png" alt="card">
+						<div class="footer__cards"> <a class="footer__cards-link" href="#"> <img class="footer__cards-img" src="src/img/credit-card.png" alt="card"></a><a class="footer__cards-link" href="#"> <img class="footer__cards-img" src="src/img/credit-card.png" alt="card"></a><a class="footer__cards-link" href="#"> <img class="footer__cards-img" src="src/img/credit-card.png" alt="card"></a><a class="footer__cards-link" href="#"> <img class="footer__cards-img" src="src/img/credit-card.png" alt="card"></a><a class="footer__cards-link" href="#"> <img class="footer__cards-img" src="src/img/credit-card.png" alt="card"></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<ul class="footer__socials">
-				<li class="footer__social"><a class="footer__social_link" href="#"><img class="footer__social_img" src="src/svg/facebook.svg" alt="social"></a></li>
-				<li class="footer__social"><a class="footer__social_link" href="#"><img class="footer__social_img" src="src/svg/twitter.svg" alt="social"></a></li>
-				<li class="footer__social"><a class="footer__social_link" href="#"><img class="footer__social_img" src="src/svg/linkedin.svg" alt="social"></a></li>
-				<li class="footer__social"><a class="footer__social_link" href="#"><img class="footer__social_img" src="src/svg/youtube.svg" alt="social"></a></li>
-				<li class="footer__social"><a class="footer__social_link" href="#"><img class="footer__social_img" src="src/svg/google-plus.svg" alt="social"></a></li>
+			<ul class="footer__social">
+				<li class="footer__social-item"><a class="footer__social-link" href="#"><img class="footer__social-img" src="src/svg/facebook.svg" alt="social"></a></li>
+				<li class="footer__social-item"><a class="footer__social-link" href="#"><img class="footer__social-img" src="src/svg/twitter.svg" alt="social"></a></li>
+				<li class="footer__social-item"><a class="footer__social-link" href="#"><img class="footer__social-img" src="src/svg/linkedin.svg" alt="social"></a></li>
+				<li class="footer__social-item"><a class="footer__social-link" href="#"><img class="footer__social-img" src="src/svg/youtube.svg" alt="social"></a></li>
+				<li class="footer__social-item"><a class="footer__social-link" href="#"><img class="footer__social-img" src="src/svg/google-plus.svg" alt="social"></a></li>
 			</ul><span class="footer__copyright">Copyrights MOHAMMAD SHOAHG. All rights researved 2016</span>
 		</footer>
 	</body>

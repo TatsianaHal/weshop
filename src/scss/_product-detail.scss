@@ -7,6 +7,7 @@
         width: calc(100% - 30px);
         margin: 0 15px 0 15px;
 
+
         @media(min-width: $sm){
             width: calc(50% - 30px);
         }
@@ -46,7 +47,7 @@
     }
 
     &__info {
-        padding-top: 50px;
+        padding-top: 50px;   
     }
 
     &__price {
@@ -115,8 +116,7 @@
         border: 1px solid $colour-gray;
 
         @media(min-width: $lg){
-            margin-right: 30px;
-             
+            margin-right: 30px;      
         }
     }
 
@@ -124,21 +124,14 @@
         margin-right: 0;
     }
 
-    &__detail_image {
-        width: 100%;
-    }
-
-    &__detail_pict {
-        width: 100%;
-        height: auto;
-    }
-
-    &__things_link {
+    &__detail-link {
         display: block;
         width: 50px;
+
+        cursor: pointer;
     }
 
-    &__things_numb {
+    &__detail-numb {
         width: 50px;
 
         text-align: center;
@@ -159,9 +152,11 @@
     &__arrow {
         display: block;
         width: 50px;
+
+        cursor: pointer;
     }
 
-    &__arrow_icon {
+    &__arrow_black {
         width: 15px;
         height: 15px;
     }
@@ -173,6 +168,14 @@
 
     &__btn:first-child {
         margin-right: 15px;
+    }
+
+    &__btn:hover {
+        color: #ffffff;
+
+        background-color: $color-blue;
+
+        transition: 1s;
     }
 
     &__share {
@@ -188,15 +191,15 @@
         display: flex;
     }
 
-    &__social {
+    &__socials-item {
         margin-right: 10px;
     }
 
-    &__social:last-child {
+    &__socials-item:last-child {
         margin-right: 0;
     }
 
-    &__social_img {
+    &__socials-img {
         width: 20px;
         height: 20px;
     }
@@ -220,13 +223,13 @@
         background-color: $color-blue;
     }
 
-    &__head_title {
+    &__title {
         position: relative;
 
         color: $colour-white;
     }
 
-    &__head_title::before {
+    &__title:first-child::before {
         content: "";
 
         position: absolute;

@@ -1,45 +1,48 @@
 section
   .shop
     .container
-      .row.row-around
+      .row
         .shop__products
           .shop__header
 
-            .shop__grid
-              a.shop__grid_link(href="#")
-                img.shop__grid_icon.shop__header_icon(src="src/svg/table-grid.svg", alt="table-grid")
-              a.shop__grid_link(href="#")
-                img.shop__grid_icon.shop__header_icon(src="src/svg/row-grid.svg", alt="row-grid")
+            .shop__grid.shop__header-col
+              a.shop__grid-link(href="#")
+                img.shop__grid-icon(src="src/svg/table-grid.svg", alt="table-grid")
+              a.shop__grid-link(href="#")
+                img.shop__grid-icon(src="src/svg/row-grid.svg", alt="row-grid")
 
-            .shop__colors
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
-              a.shop__color.shop__header_icon(href="#")
+            .shop__colors.shop__header-col
+              a.shop__color(href="#")
+              a.shop__color(href="#")
+              a.shop__color(href="#")
+              a.shop__color(href="#")
+              a.shop__color(href="#")
+              a.shop__color(href="#")
+              a.shop__color(href="#")
 
             -
               var sort= [{
-                        title:'Sort by:',
-                        text:"Date"
+                        name: 'Sort by:',
+                        title:'Date',
+                        text:""
                         },{
+                        name: '',
                         title:'Shows',
                         text:"12"
                         }]
             each item in sort
-              .shop__sort
-                span.shop__sort_text= item.title
-                span.shop__sort_text= item.text
-                button.shop__sort_link(href="#")
-                    img.shop__sort_arrow(src="src/svg/down-arrow.svg", alt="more")
+              .shop__sort.shop__header-col
+                span.shop__sort-text= item.name 
+                span.shop__sort-text= item.title
+                span.shop__sort-text= item.text
+                button.shop__sort-link(href="#")
+                    img.shop__sort-arrow(src="src/svg/down-arrow.svg", alt="more")
 
           .shop__cards
             - for (var i = 1; i <= 4; i++)
               include ../components/_shop-card   
 
-          ul.shop__footer
+          ul.shop__pag
             -
               var pages= ["Prev",
                            "1", 
@@ -49,14 +52,14 @@ section
                            "5",
                            "Next"]
             each item in pages
-              li.shop__footer_item
-                a.shop__footer_link(href="#")= item 
+              li.shop__pag-item
+                a.shop__pag-link(href="#")= item 
             
 
         aside.shop__aside   
-          .shop__aside_part
-            span.shop__aside_title CATEGORY
-            ul.shop__aside_list
+          .shop__aside-part
+            span.shop__aside-title CATEGORY
+            ul.shop__aside-list
               -
                 var category= [{
                             text:'Women',
@@ -78,25 +81,25 @@ section
                             quant:'(7)'
                             }]
               each item in category
-                li.shop__aside_row
-                  a.shop__aside_item(href="#")= item.text 
-                  span.shop__aside_quant= item.quant
+                li.shop__aside-row
+                  a.shop__aside-item(href="#")= item.text 
+                  span.shop__aside-quant= item.quant
             
-          .shop__aside_part
-            span.shop__aside_title.shop__aside_title-price PRICE BY FILTER
-            .shop__aside_slider
-            .shop__aside_slider-under
-              .shop__aside_interval
-                span.shop__aside_price Price: $
-                input.shop__aside_input(type='text' name='name' placeholder='250')
-                span.shop__aside_price -$
-                input.shop__aside_input(type='text' name='name' placeholder='100')
-              a.shop__aside_btn.btn(href="#")
+          .shop__aside-part
+            span.shop__aside-title-price.shop__aside-title PRICE BY FILTER
+            .shop__aside-slider
+            .shop__aside-slider_under
+              .shop__aside-interval
+                span.shop__aside-price Price: $
+                input.shop__aside-input(type='text' name='name' placeholder='250')
+                span.shop__aside-price -$
+                input.shop__aside-input(type='text' name='name' placeholder='100')
+              a.shop__aside-btn.btn(href="#")
                 span.btn-text Filter
                   
-          .shop__aside_part
-            span.shop__aside_title SIZE
-            ul.shop__aside_list
+          .shop__aside-part
+            span.shop__aside-title SIZE
+            ul.shop__aside-list
               -
                 var size=[{
                             text:'S',
@@ -116,13 +119,13 @@ section
                             }]
                 
               each item in size 
-                li.shop__aside_row
-                  input(type="radio" checked name="raz")
-                  a.shop__aside_item(href="#")= item.text 
-                  span.shop__aside_quant= item.quant
+                li.shop__aside-row
+                  input(type="radio" checked name="raz").shop__aside-input
+                  a.shop__aside-item(href="#")= item.text 
+                  span.shop__aside-quant= item.quant
             
-          .shop__aside_part
-            span.shop__aside_title BEST SALE
+          .shop__aside-part
+            span.shop__aside-title BEST SALE
 
             -
               var top= [{
@@ -135,37 +138,31 @@ section
                          price:'$289-$250'
                          }]
             each item in top
-              .shop__aside_card.aside.aside__card
-                .aside__card_pict
-                  img.aside__card_img(src= item.img, alt="t-shirt") 
-                .aside__card_info
-                  span.aside__card_name= item.name
+              .shop__aside-card
+                a.shop__card-pict(href="#")
+                  img.shop__card-img(src= item.img, alt="t-shirt") 
+                .shop__card-info
+                  a.shop__card-name(href="#")= item.name
                   br
-                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
-                  img.aside__card_stars(src="src/svg/star.svg", alt="stars")
+                  img.shop__stars(src="src/svg/star.svg", alt="stars")
+                  img.shop__stars(src="src/svg/star.svg", alt="stars")
+                  img.shop__stars(src="src/svg/star.svg", alt="stars")
+                  img.shop__stars(src="src/svg/star.svg", alt="stars")
+                  img.shop__stars(src="src/svg/star.svg", alt="stars")
                   br
-                  span.aside__card_price= item.price
+                  span.shop__card-price= item.price
             
 
-          .shop__aside_part
-            span.shop__aside_title KEYWORD
-            .shop__asid_line
+          .shop__aside-part
+            span.shop__aside-title KEYWORD
+            .shop__asid-line
               -
                 var keyword= ["T-shirt",
                               "Black", 
-                              "White"]
-              each item in keyword
-                a.shop__aside_keyword.btn(href="#")
-                  span.btn-text= item 
-
-            .shop__asid_line
-              -
-                var keyword= ["Fashion", 
+                              "White",
+                              "Fashion", 
                               "Woman", 
                               "Man"]
               each item in keyword
-                a.shop__aside_keyword.btn(href="#")
-                  span.btn-text= item 
+                a.shop__aside-keyword.btn(href="#")
+                  span.btn-text= item  

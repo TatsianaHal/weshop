@@ -4,16 +4,16 @@
   .card__details
     span.card__cost $500
 
-    a.card__link.card__link_view(href="#")
+    a.card__link-view.card__link(href="#")
       img.card__icon(src="src/svg/eye.svg", alt="card")
 
-    a.card__link.card__link_like(href="#")
+    a.card__link-like.card__link(href="#")
       img.card__icon(src="src/svg/heart.svg", alt="card")
 
-    span.card__text Add to cart
-
-    a.card__link.card__basket(href="#")
-      img.card__icon(src="src/svg/basket.svg", alt="card")
+    a.card__link-basket(href="#")
+      span.card__basket-text Add to cart
+      .card__basket-btn
+        img.card__icon(src="src/svg/basket.svg", alt="card")
 
 
 

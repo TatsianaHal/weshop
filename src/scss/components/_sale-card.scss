@@ -14,14 +14,35 @@
         height: auto;
     }
 
+    &__details {
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__details:hover {
+        cursor: pointer;
+
+        .card__cost {
+            display: block;
+        }
+
+        .card__link {
+            display: block;
+        }
+
+    }
+
     &__cost {
         position: absolute;
         top: 0;
         
         display: none;
-        width: 50px;
-        height: 35px;
-        padding-top: 10px;
+        width: 45px;
+        height: 30px;
+        padding-top: 6px;
 
         color: $colour-white;
         text-align: center;
@@ -30,13 +51,13 @@
     }
 
     &__link {
-        position: absolute;
+        position: relative;
 
-        display: block;
-        width: 35px;
-        height: 35px;
+        display: none;
+        width: 30px;
+        height: 30px;
 
-        border: 2px solid $color-blue;
+        border: 1px solid $color-blue;
     }
 
     &__link::before {
@@ -51,59 +72,43 @@
     
     &__icon {
         position: absolute;
-        top: 4px;
-        left: 3px;
+        top: 2px;
+        left: 2px;
 
         width: 25px;
         height: 25px;
     }
 
-    &__link_view {
-        display: none;
-
-        top: 200px;
-        right: 0;
-
-        @media(min-width: $sm){
-            top: 70px;    
-        }
-      
-        @media(min-width: $md){
-            top: 140px;  
-        }
-
-        @media(min-width: $lg){
-            top: 190px;
-        }
-    }
-
-    &__link_like {
-        display: none;
-
-        top: 250px;
-        right: 0;
-
-        @media(min-width: $sm){
-            top: 120px;  
-        }
-
-        @media(min-width: $md){
-            top: 190px;
-        }
-
-        @media(min-width: $lg){
-            top: 240px;
-        }
-    }
-
-    &__text {
+    &__link-view {
         position: absolute;
-        top: 300px;
-        right: 35px;
+        right: 0;
+        bottom: 135px;
+    }
 
+    &__link-like {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+    }
+
+    &__link-basket {
+        position: absolute;
+        right: 0;
+        bottom: 25px;
+
+        display: flex;
+    }
+
+    &__link-basket:hover {
+        .card__basket-text {
+            display: block;
+        }
+    }
+
+    &__basket-text {
         display: none;
         width: 100px;
-        height: 35px;
+        height: 30px;
         padding-top: 8px; 
 
         color: $colour-white;
@@ -111,61 +116,26 @@
         font-size: $f-s-sm;
 
         background-color: $color-blue;
-
-        @media(min-width: $xs){
-            top: 290px;
-        }
-
-        @media(min-width: $sm){
-            top: 170px;  
-        }
-
-        @media(min-width: $md){
-            top: 240px;
-        }
-
-        @media(min-width: $lg){
-            top: 290px;
-        }
     }
 
-    &__basket {
-        top: 300px;
-        right: 0;
+    &__basket-btn {
+        position: relative;
 
-        @media(min-width: $xs){
-            top: 290px;
-        }
+        display: block;
+        width: 30px;
+        height: 30px;
 
-        @media(min-width: $sm){
-            top: 170px;  
-        }
-
-        @media(min-width: $md){
-            top: 240px;
-        }
-
-        @media(min-width: $lg){
-            top: 290px;
-        }
+        border: 1px solid $color-blue;
     }
 
-    &__details:hover {
-        .card__cost {
-            display: block;
-        }
+    &__basket-btn::before {
+        content: "";
 
-        .card__link_view {
-            display: block;
-        }
+        position: absolute;
 
-        .card__link_like {
-            display: block;
-        }
-
-        .card__text {
-            display: block;
-        }
+        border: 6px solid transparent;
+        border-left: 6px solid $color-blue;
+        border-top: 6px solid $color-blue;
     }
 
     @media(min-width: $xs){
@@ -181,6 +151,9 @@
         margin-bottom: 0; 
     }
 }
+
+
+
 
 
 

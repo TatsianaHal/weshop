@@ -3,11 +3,11 @@ section
     .container
       .row.related-items__row
         h3.related-items__title Related Items
-        button.related-items__slider.related-items__slider_prev(href="#")
+        a.related-items__slider.related-items__slider_prev(href="#")
           img.related-items__slider_prev-icon(src="src/svg/right-ar.svg", alt="before")
         .related-items__wrap                           
             - for (var i = 1; i <= 4; i++)
               include ../components/_sale-card
                 
-        button.related-items__slider.related-items__slider_next(href="#") 
+        a.related-items__slider.related-items__slider_next(href="#") 
           img.related-items__slider_next-icon(src="src/svg/right-ar.svg", alt="after")

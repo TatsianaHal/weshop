@@ -18,4 +18,8 @@
     &__item:last-child {
         margin-right: 0;
     }
+
+    &__link:hover {
+        color: $color-blue;
+    }
 }
