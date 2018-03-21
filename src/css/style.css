@@ -590,15 +590,25 @@ a {
 }
 
 .nav__item {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .nav__item:last-child {
   margin-right: 0;
 }
 
+.nav__link {
+  position: relative;
+}
+
 .nav__link:hover {
   color: #48689a;
+}
+
+.nav__quant {
+  position: absolute;
+  top: -12px;
+  font-size: 12px;
 }
 
 .card {
@@ -1228,6 +1238,7 @@ a {
 
 .header__link:hover {
   color: #eeeeee;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .header__basket {
@@ -2188,6 +2199,7 @@ a {
 }
 
 .footer__imgs {
+  display: block;
   width: 60px;
 }
 
@@ -2289,8 +2301,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto 10px auto;
-  color: #9aa6b9;
   font-size: 24px;
+}
+
+.shop-head__breadcrumbs-link {
+  color: #9aa6b9;
 }
 
 .shop-head__title {
@@ -2542,12 +2557,6 @@ a {
   justify-content: space-between;
 }
 
-.shop__aside-interval {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .shop__aside-input {
   width: 30px;
 }
@@ -2566,6 +2575,10 @@ a {
 
 .shop__aside-quant {
   font-size: 12px;
+}
+
+.shop__aside-interval {
+  padding-top: 6px;
 }
 
 .shop__asid-line {

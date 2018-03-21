@@ -1,9 +1,20 @@
 .nav        
   ul.nav__list
     -
-      var nav = ["ALL", "MEN", "WOMEN", "SHOP", "ACCESSORIES"]
+      var nav = [{
+                name: "ALL",
+                quant: ""},
+                {name: "MEN",
+                quant: ""}, 
+                {name: "WOMEN",
+                quant: "(11)"},
+                {name: "SHOP",
+                quant: "" },
+                {name: "ACCESSORIES",
+                quant: ""}
+                ]
     each item in nav  
       li.nav__item
-        a.nav__link(href="#")= item
-          span.nav__quant
+        a.nav__link(href="#")= item.name
+          span.nav__quant= item.quant
       
